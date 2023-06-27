@@ -7,10 +7,11 @@ namespace S_Durlanik.UI
 {
     public class UIMenus : MonoBehaviour 
     {
+        #if UNITY_EDITOR
         [MenuItem("S-Durlanik/UI Tools/Create UI Group")]
         public static void CreateUIGroup()
         {
-            var uiGroup = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Bullet Bounce/Prefab/UI/UI_GRP.prefab");
+            var uiGroup = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Bullet Bounce/UI System/Prefab/UI/UI_GRP.prefab");
             if(uiGroup)
             {
                 var createdGroup = (GameObject)Instantiate(uiGroup);
@@ -21,5 +22,6 @@ namespace S_Durlanik.UI
                 EditorUtility.DisplayDialog("UI Tools Warning", "Cannot find UI Group Prefab!", "OK");
             }
         }
+        #endif
     }
 }

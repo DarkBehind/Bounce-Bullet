@@ -2,7 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using S_Durlanik.UI;
-using Unity.Plastic.Newtonsoft.Json;
+using Newtonsoft.Json;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -14,7 +15,8 @@ namespace S_Durlanik.Game
         public static InventoryManager Instance { get; private set; }
         
         public ItemClaimUI itemClaimPopup;
-        
+        [Header("UI")]
+        public List<TextMeshProUGUI> goldAmountTexts;
         private void Awake()
         {
             Instance = this;
@@ -70,6 +72,15 @@ namespace S_Durlanik.Game
             SaveInventory();
         }
         
+        public int GetCurrencyGoldAmount() => UserGold.stackAmount;
+
+        public void UpdateUIGoldAmount()
+        {
+            foreach (TextMeshProUGUI goldAmountText in goldAmountTexts)
+            {
+                goldAmountText.text = GetCurrencyGoldAmount().ToString();
+            }
+        }
         public void ShowItemClaimPopup(DailyLoginReward reward)
         {
             itemClaimPopup.gameObject.SetActive(true);
@@ -77,8 +88,11 @@ namespace S_Durlanik.Game
         }
 
         // Envanter kayit islemi => purchasedItems listesini json stringine cevirip PlayerPrefs'a kaydeder
-        public void SaveInventory() => PlayerPrefs.SetString("jsonInventory", JsonConvert.SerializeObject(purchasedItems));
-
+        public void SaveInventory()
+        {
+            PlayerPrefs.SetString("jsonInventory", JsonConvert.SerializeObject(purchasedItems));
+            UpdateUIGoldAmount();
+        }
 
 
         // Envanter yukleme islemi => PlayerPrefs'ten json stringini alip purchasedItems listesine cevirir
@@ -110,6 +124,8 @@ namespace S_Durlanik.Game
                 PurchaseItem(gold, true);
                 SaveInventory();
             }
+            
+            UpdateUIGoldAmount();
         }
         
     }
