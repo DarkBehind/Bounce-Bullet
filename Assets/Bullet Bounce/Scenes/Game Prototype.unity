@@ -14331,7 +14331,7 @@ GameObject:
   - component: {fileID: 1043366689}
   - component: {fileID: 1043366688}
   m_Layer: 5
-  m_Name: Gem_Value
+  m_Name: Coin_Value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50375,8 +50375,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
-  gameOverPart1: {fileID: 0}
-  gameOverPart2: {fileID: 0}
+  gameOverPart1: {fileID: 226728962}
+  gameOverPart2: {fileID: 472068857}
+  bulletPrice: 100
+  bulletAmount: 1
+  bulletPriceText: {fileID: 946523176877243696}
 --- !u!225 &946523177692670194
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -50386,7 +50389,7 @@ CanvasGroup:
   m_GameObject: {fileID: 946523177692670159}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
+  m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!95 &946523177692670195
@@ -90396,7 +90399,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1376133952908774205}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1376133953074628343}
+        m_TargetAssemblyTypeName: S_Durlanik.UI.StageClearUI, BulletBounce
+        m_MethodName: Button_OnClaim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1376133953074628341
 GameObject:
   m_ObjectHideFlags: 0
@@ -90406,6 +90421,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1376133953074628342}
+  - component: {fileID: 1376133953074628345}
+  - component: {fileID: 1376133953074628344}
+  - component: {fileID: 1376133953074628343}
   m_Layer: 5
   m_Name: StageClear
   m_TagString: Untagged
@@ -90439,6 +90457,60 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1376133953074628343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376133953074628341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6317888c051e6c148b707eafe8dfa17e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSelectable: {fileID: 0}
+  rewardAmountText: {fileID: 1043366688}
+  rewardItem:
+    itemCode: currencyGold
+    name: Gold
+    stackAmount: 120
+    cost: 0
+    itemType: 0
+  claimButton: {fileID: 1376133952908774207}
+  doubleClaimButton: {fileID: 1376133954818361147}
+--- !u!225 &1376133953074628344
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376133953074628341}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!95 &1376133953074628345
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376133953074628341}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 59f480a51a0ea2b408b0982ef38311dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1376133953834037568
 GameObject:
   m_ObjectHideFlags: 0
@@ -91099,7 +91171,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1376133954818361145}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1376133953074628343}
+        m_TargetAssemblyTypeName: S_Durlanik.UI.StageClearUI, BulletBounce
+        m_MethodName: Button_DoubleClaim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1376133954818361151
 GameObject:
   m_ObjectHideFlags: 0
@@ -96887,7 +96971,7 @@ CanvasGroup:
   m_GameObject: {fileID: 2530574701794018915}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
+  m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!95 &2530574701794018927
@@ -98914,7 +98998,7 @@ CanvasGroup:
   m_GameObject: {fileID: 2764149328725325989}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
+  m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!95 &2764149328725326013
@@ -99995,7 +100079,7 @@ CanvasGroup:
   m_GameObject: {fileID: 2693617260159539286}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
+  m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!95 &3176310078111916587
@@ -100500,7 +100584,7 @@ CanvasGroup:
   m_GameObject: {fileID: 3375258144341756689}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
+  m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!95 &3375258144341756697
@@ -111846,7 +111930,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 154.5, y: 0}
   m_SizeDelta: {x: 0, y: 64}
   m_Pivot: {x: 0.5, y: 0.50000125}
 --- !u!114 &4542144261724530065
@@ -150355,7 +150439,7 @@ CanvasGroup:
   m_GameObject: {fileID: 9040205097000328483}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
+  m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!95 &9040205097000328486

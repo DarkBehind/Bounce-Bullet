@@ -20,8 +20,8 @@ namespace S_Durlanik.Game
         [HideInInspector] public int enemyCount;
 
         private bool _isGameRunning;
-
-
+        int _currentLevel;
+        Level _currentLevelObject;
         private void OnEnable()
         {
             Enemy.OnEnemyDestroyed += OnEnemyDestroyed;
@@ -91,12 +91,16 @@ namespace S_Durlanik.Game
 
         public void LoadLevel(int levelNumber)
         {
+            if(_currentLevelObject)
+                Destroy(_currentLevelObject.gameObject);
             Level levelToLoad = Instantiate(Resources.Load<Level>("Levels/Level" + levelNumber), levelsParent);
 
             if (levelToLoad)
             {
                 OnLevelStarted?.Invoke();
                 _isGameRunning = true;
+                _currentLevel = levelNumber;
+                _currentLevelObject = levelToLoad;
                 InvokeRepeating(nameof(CheckLevelFailed), 1, 1f);
             }
             else
@@ -109,12 +113,13 @@ namespace S_Durlanik.Game
 
         public void RestartLevel()
         {
-            
+            UI_System.Instance.GoToPlayScreen();
+            LoadLevel(_currentLevel);
         }
 
         public void ReturnToMenu()
         {
-            
+            UI_System.Instance.GoToMainScreen();
         }
         private void SetLevelProperties(Level level)
         {

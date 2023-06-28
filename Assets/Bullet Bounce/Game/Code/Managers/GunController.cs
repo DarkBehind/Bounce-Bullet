@@ -22,7 +22,7 @@ namespace S_Durlanik.Game
         void Start()
         {
             _playerRigidbody = transform.parent.GetComponent<Rigidbody2D>();
-            _lineObject = Instantiate(lineObjectPrefab);
+            _lineObject = Instantiate(lineObjectPrefab,transform.parent.parent.parent);
             _lineRenderer = _lineObject.GetComponent<LineRenderer>();
             _lineRenderer.startWidth = _lineRenderer.endWidth = lineWidth;
             _camera = Camera.main;
@@ -60,7 +60,7 @@ namespace S_Durlanik.Game
 
         private void AimAndFire()
         {
-            Bullet bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+            Bullet bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation,transform.parent.parent.parent);
             bullet.maxBounces = Mathf.RoundToInt(maxBounces);
             Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
             bulletRigidbody.AddForce(transform.right * bullet.speed, ForceMode2D.Impulse);
