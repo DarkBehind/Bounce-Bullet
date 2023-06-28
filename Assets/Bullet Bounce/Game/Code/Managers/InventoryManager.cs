@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using S_Durlanik.UI;
 using Newtonsoft.Json;
 using TMPro;
@@ -15,8 +16,7 @@ namespace S_Durlanik.Game
         public static InventoryManager Instance { get; private set; }
         
         public ItemClaimUI itemClaimPopup;
-        [Header("UI")]
-        public List<TextMeshProUGUI> goldAmountTexts;
+
         private void Awake()
         {
             Instance = this;
@@ -33,8 +33,15 @@ namespace S_Durlanik.Game
         {
             if (isFree)
             {
-                purchasedItems.Add(item);
+                if (purchasedItems.Any(x => x.itemCode == item.itemCode))
+                {
+                    purchasedItems.Find(x => x.itemCode == item.itemCode).stackAmount += item.stackAmount;
+                }else
+                {
+                    purchasedItems.Add(item);
+                }
                 Debug.Log($"Free item added to purchasedItems: {item.itemCode}");
+                SaveInventory();
                 return;
             }
 
@@ -72,19 +79,32 @@ namespace S_Durlanik.Game
             SaveInventory();
         }
         
-        public int GetCurrencyGoldAmount() => UserGold.stackAmount;
+        int GetCurrencyGoldAmount() => UserGold.stackAmount;
+        
+        public void CheckGoldAndRemove(int amount,Action successCallback = null,Action failCallback = null)
+        {
+            if (GetCurrencyGoldAmount() >= amount)
+            {
+                RemoveGold(amount);
+                successCallback?.Invoke();
+            }
+            else
+            {
+                failCallback?.Invoke();
+            }
+        }
 
         public void UpdateUIGoldAmount()
         {
-            foreach (TextMeshProUGUI goldAmountText in goldAmountTexts)
+            foreach (TextMeshProUGUI goldAmountText in UI_System.Instance.goldAmountTexts)
             {
                 goldAmountText.text = GetCurrencyGoldAmount().ToString();
             }
         }
-        public void ShowItemClaimPopup(DailyLoginReward reward)
+        public void ShowItemClaimPopup(Sprite _itemImage, int _amount)
         {
             itemClaimPopup.gameObject.SetActive(true);
-            itemClaimPopup.Show(reward);
+            itemClaimPopup.Show(_itemImage,_amount);
         }
 
         // Envanter kayit islemi => purchasedItems listesini json stringine cevirip PlayerPrefs'a kaydeder
@@ -143,6 +163,12 @@ namespace S_Durlanik.Game
         {
             Currency
         }
+    }
+
+    [Serializable]
+    public class SpinItem : InventoryItem
+    {
+        public Sprite itemSprite;
     }
     
     

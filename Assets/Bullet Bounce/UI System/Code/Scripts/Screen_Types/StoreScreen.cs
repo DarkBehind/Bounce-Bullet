@@ -61,7 +61,7 @@ namespace S_Durlanik.UI
 
         public void OnRemoveAds()
         {
-            Debug.Log("Ads removed");
+            ADS.Instance.RemoveAds();
         }
     }
 

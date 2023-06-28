@@ -11,10 +11,10 @@ namespace S_Durlanik.UI
         public Image itemImage;
         public TextMeshProUGUI amountText;
         
-        public void SetPopupClaimItemUI(DailyLoginReward reward)
+        public void SetPopupClaimItemUI(Sprite _itemImage, int _amount)
         {
-            itemImage.sprite = reward.itemIcon;
-            amountText.text =$"x{reward.amount}";
+            itemImage.sprite = _itemImage;
+            amountText.text =$"x{_amount}";
         }
     }
 }

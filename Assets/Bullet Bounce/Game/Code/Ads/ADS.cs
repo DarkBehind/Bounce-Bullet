@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,14 @@ using UnityEngine;
 public class ADS : MonoBehaviour
 {
     string bannerAdUnitId = "c1586ad841a06c22"; // Retrieve the ID from your account
+    public Rewarded rewarded;
+    
+    public static ADS Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
 
-    // Start is called before the first frame update
     void Start()
     {
         MaxSdkCallbacks.OnSdkInitializedEvent += (MaxSdkBase.SdkConfiguration sdkConfiguration) =>
@@ -16,12 +23,12 @@ public class ADS : MonoBehaviour
             // Banners are automatically sized to 320×50 on phones and 728×90 on tablets
             // You may call the utility method MaxSdkUtils.isTablet() to help with view sizing adjustments
             
-            
+            // BANNER BURADA 
             //MaxSdk.CreateBanner(bannerAdUnitId, MaxSdkBase.BannerPosition.TopLeft);
 
             // Set background or background color for banners to be fully functional
             
-            
+            // BANNER DEVAMI
             //MaxSdk.SetBannerBackgroundColor(bannerAdUnitId, Color.black);
             //MaxSdk.ShowBanner(bannerAdUnitId);
         };
@@ -31,9 +38,8 @@ public class ADS : MonoBehaviour
         MaxSdk.InitializeSdk();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveAds()
     {
-        
+        Debug.Log("RemoveAds");
     }
 }

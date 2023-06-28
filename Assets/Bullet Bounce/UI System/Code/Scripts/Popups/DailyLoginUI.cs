@@ -104,7 +104,7 @@ namespace S_Durlanik.UI
 
         public void ClaimReward()
         {
-            InventoryManager.Instance.ShowItemClaimPopup(_currentReward);
+            InventoryManager.Instance.ShowItemClaimPopup(_currentReward.itemIcon, _currentReward.amount);
             InventoryManager.Instance.AddGold(_currentReward.amount);
             Extensions.SetCurrentDayRewardTaken();
         }

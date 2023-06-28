@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using S_Durlanik.Game;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace S_Durlanik.UI
 {
@@ -12,18 +15,24 @@ namespace S_Durlanik.UI
         public override void StartScreen()
         {
             base.StartScreen();
+            
+            spinSlotItems.ForEach(x => x.SetSpinSlotUI(rewardItems[x.slotID]));
         }
         
         public override void CloseScreen()
         {
             base.CloseScreen();
         }
-        
+
         public Transform wheel; // cark transform'u
         public Button spinButton; // buton referansı
+        public Button freeSpinButton; // ücretsiz dönüş butonu referansı
+        public Button closeButton; // kapatma butonu referansı
         public float timeToStop = 3f; // durma zamanı
         public TextMeshProUGUI resultText; // sonuç yazısı
-       
+        public int spinGoldAmount = 150; // dönüş için gerekli altın miktarı
+        public List<SpinItem> rewardItems; // ödül itemleri
+        public List<SpinSlotItemUI> spinSlotItems; // slot itemleri
 
 
         private bool _isSpinning = false; // dönüyor mu?
@@ -31,18 +40,39 @@ namespace S_Durlanik.UI
         private float _anglePerSegment = 45f; // her bir bölüm açısı
         private int _selectedSegmentNumber = -1; // seçilen bölüm numarası
         private float _rotationSpeed = 1000f;
-        public void SpinTheWheel()
+        public void Button_SpinTheWheel()
         {
-            if (!_isSpinning)
+            InventoryManager.Instance.CheckGoldAndRemove(spinGoldAmount, () =>
             {
-                _isSpinning = true;
-                spinButton.interactable = false; // Butonun tekrar tıklanamaması için devre dışı bırakıldı
-                resultText.text = "";
-                wheel.eulerAngles = Vector3.zero; // Çarkın açısı sıfırlandı
-                _rotationSpeed = Random.Range(800, 1000);                                               
-                StartCoroutine(SpinWheelCoroutine());
-            }
+                SpinWheel();
+            });
         }
+        public void Button_FreeSpin()
+        {
+            SpinButtonsStatus(false);
+            ADS.Instance.rewarded.LoadRewardedAd(null, () =>
+            {
+                SpinWheel();
+            });
+        }
+        private void SpinWheel()
+        {
+            if (_isSpinning) return;
+            _isSpinning = true;
+            SpinButtonsStatus(false);
+            resultText.text = "";
+            wheel.eulerAngles = Vector3.zero; // Çarkın açısı sıfırlandı
+            _rotationSpeed = Random.Range(800, 1000);
+            StartCoroutine(SpinWheelCoroutine());
+        }
+
+        void SpinButtonsStatus(bool status)
+        {
+            closeButton.interactable = status;
+            spinButton.interactable = status;
+            freeSpinButton.interactable = status;
+        }
+        
 
         private IEnumerator SpinWheelCoroutine()
         {
@@ -107,11 +137,14 @@ namespace S_Durlanik.UI
             // Sonucu yazdır
             resultText.text = "Selected Segment: " + (_selectedSegmentNumber);
 
+            // Ödülü ver
+            InventoryManager.Instance.PurchaseItem(rewardItems[_selectedSegmentNumber - 1],true);
+            InventoryManager.Instance.ShowItemClaimPopup(rewardItems[_selectedSegmentNumber - 1].itemSprite, rewardItems[_selectedSegmentNumber - 1].stackAmount);
+            
             // Butonu tekrar etkinleştir
-            spinButton.interactable = true;
+            SpinButtonsStatus(true);
             
             _isSpinning = false;
         }
-
     }
 }

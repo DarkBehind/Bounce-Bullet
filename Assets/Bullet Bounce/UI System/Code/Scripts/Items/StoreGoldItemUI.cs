@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using S_Durlanik.Game;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -17,10 +18,12 @@ namespace S_Durlanik.UI
         public GameObject watchAdsButton;
 
         private string _itemCode;
+        int _goldAmount;
         public void SetStoreGoldItemUI(GoldOffer offer)
         {
             _itemCode = offer.itemCode;
             goldAmountText.text = offer.goldAmount.ToString();
+            _goldAmount = offer.goldAmount;
             icon.sprite = offer.icon;
             bestOfferIcon.gameObject.SetActive(offer.isBestOffer);
 
@@ -54,6 +57,12 @@ namespace S_Durlanik.UI
         public void OnWatchAds()
         {
             Debug.Log("Watch ads for: " + _itemCode);
+            ADS.Instance.rewarded.LoadRewardedAd(null, () =>
+            {
+                InventoryManager.Instance.AddGold(_goldAmount);
+                InventoryManager.Instance.ShowItemClaimPopup(icon.sprite, _goldAmount);
+                Debug.Log("Reward earned: " + _itemCode);
+            });
         }
     }
 

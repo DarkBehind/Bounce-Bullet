@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -12,13 +14,15 @@ namespace S_Durlanik.UI
         #region Variables
         public UI_Screen startScreen;
         public UI_Screen playScreen;
-
+        public List<TextMeshProUGUI> goldAmountTexts;
+        
         public static event Action OnSwitchedScreen;
 
         public Image fader;
         public float fadeInDuration = 1f;
         public float fadeOutDuration = 1f;
 
+        
         private Component[] _screens = Array.Empty<Component>();
 
         private UI_Screen _previousScreen;

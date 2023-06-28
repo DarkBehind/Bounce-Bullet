@@ -8,7 +8,7 @@ namespace S_Durlanik.UI
     public class ItemClaimUI: MonoBehaviour
     {
         public PopupClaimItemUI examplePopupClaimItemUI;
-        public void Show(DailyLoginReward reward)
+        public void Show(Sprite _itemImage, int _amount)
         {
             examplePopupClaimItemUI.gameObject.SetActive(false);
             foreach (Transform child in examplePopupClaimItemUI.transform.parent)
@@ -19,14 +19,14 @@ namespace S_Durlanik.UI
                 }
             }
             
-            StartCoroutine(ShowItemClaimUI(reward));
+            StartCoroutine(ShowItemClaimUI(_itemImage,_amount));
         }
         
-        private IEnumerator ShowItemClaimUI(DailyLoginReward reward)
+        private IEnumerator ShowItemClaimUI(Sprite _itemImage, int _amount)
         {
             yield return new WaitForSeconds(.5f);
             examplePopupClaimItemUI.gameObject.SetActive(true);
-            examplePopupClaimItemUI.SetPopupClaimItemUI(reward);
+            examplePopupClaimItemUI.SetPopupClaimItemUI(_itemImage,_amount);
         }
     }
 }

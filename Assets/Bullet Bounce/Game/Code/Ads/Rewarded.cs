@@ -26,9 +26,12 @@ public class Rewarded : MonoBehaviour
 
 
     }
-
-    public void LoadRewardedAd()
+    Action _onRewardedAdLoadedEvent;
+    Action _onRewardedAdReceivedRewardEvent;
+    public void LoadRewardedAd(Action onRewardedAdLoadedEvent = null,Action onRewardedAdReceivedRewardEvent = null)
     {
+        _onRewardedAdLoadedEvent = onRewardedAdLoadedEvent;
+        _onRewardedAdReceivedRewardEvent = onRewardedAdReceivedRewardEvent;
         MaxSdk.LoadRewardedAd(adUnitId);
     }
 
@@ -38,6 +41,8 @@ public class Rewarded : MonoBehaviour
         MaxSdk.ShowRewardedAd(adUnitId);
         // Reset retry attempt
         retryAttempt = 0;
+        
+        _onRewardedAdLoadedEvent?.Invoke();
     }
 
     private void OnRewardedAdLoadFailedEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo)
@@ -70,16 +75,12 @@ public class Rewarded : MonoBehaviour
     private void OnRewardedAdReceivedRewardEvent(string adUnitId, MaxSdk.Reward reward, MaxSdkBase.AdInfo adInfo)
     {
         // The rewarded ad displayed and the user should receive the reward.
+        _onRewardedAdReceivedRewardEvent?.Invoke();
     }
 
     private void OnRewardedAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
     {
         // Ad revenue paid. Use this callback to track user revenue.
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        
     }
 }
