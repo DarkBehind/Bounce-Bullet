@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Art/Animation/SD_Base_Screen_Hide.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Art/Animation/SD_Base_Screen_Hide.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Art/Animation/SD_Base_Screen_Show.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Art/Animation/SD_Base_Screen_Show.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/GameOverUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/GameOverUI.cs" afterDir="false" />
-    </list>
+    <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +72,7 @@
       <workItem from="1687898478274" duration="1290000" />
       <workItem from="1687899792715" duration="76000" />
       <workItem from="1687899910572" duration="11734000" />
-      <workItem from="1687979941490" duration="3409000" />
+      <workItem from="1687979941490" duration="4131000" />
     </task>
     <servers />
   </component>
