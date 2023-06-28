@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using S_Durlanik.Game;
 using S_Durlanik.UI;
 using UnityEngine;
 
@@ -26,7 +27,7 @@ namespace S_Durlanik.UI
 
         public void OnMenu()
         {
-
+            LevelManager.Instance.ReturnToMenu();
         }
 
     }

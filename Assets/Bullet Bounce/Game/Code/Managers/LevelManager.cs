@@ -14,13 +14,11 @@ namespace S_Durlanik.Game
         public static event Action OnLevelFailed;
 
         public PlayTopBar playTopBar;
-        
+
         public Transform levelsParent;
-        [HideInInspector]
-        public int maxShotCount;
-        [HideInInspector]
-        public int enemyCount;
-        
+        [HideInInspector] public int maxShotCount;
+        [HideInInspector] public int enemyCount;
+
         private bool _isGameRunning;
 
 
@@ -36,7 +34,7 @@ namespace S_Durlanik.Game
             GunController.OnBulletFired -= OnBulletFired;
         }
 
-     
+
 
         private void OnEnemyDestroyed(Enemy enemy)
         {
@@ -47,14 +45,14 @@ namespace S_Durlanik.Game
                 Debug.Log("Level Completed!");
             }
         }
-        
+
         private void OnBulletFired()
         {
             if (maxShotCount <= 0)
             {
                 return;
             }
-            
+
             maxShotCount--;
             playTopBar.UpdateBulletCountText();
         }
@@ -71,14 +69,14 @@ namespace S_Durlanik.Game
             {
                 return;
             }
-            
+
             if (maxShotCount <= 0 && enemyCount > 0)
             {
                 if (FindObjectOfType<Bullet>())
                 {
                     return;
                 }
-                
+
                 OnLevelFailed?.Invoke();
                 Debug.Log("Level Failed!");
                 _isGameRunning = false;
@@ -90,7 +88,7 @@ namespace S_Durlanik.Game
         {
             return PlayerPrefs.GetInt(Extensions.Prefs.Level, 1);
         }
-        
+
         public void LoadLevel(int levelNumber)
         {
             Level levelToLoad = Instantiate(Resources.Load<Level>("Levels/Level" + levelNumber), levelsParent);
@@ -99,20 +97,39 @@ namespace S_Durlanik.Game
             {
                 OnLevelStarted?.Invoke();
                 _isGameRunning = true;
-                InvokeRepeating(nameof(CheckLevelFailed),1,1f);
+                InvokeRepeating(nameof(CheckLevelFailed), 1, 1f);
             }
             else
             {
                 Debug.LogError("Level not found!");
             }
-            
+
             SetLevelProperties(levelToLoad);
         }
-        
+
+        public void RestartLevel()
+        {
+            
+        }
+
+        public void ReturnToMenu()
+        {
+            
+        }
         private void SetLevelProperties(Level level)
         {
             maxShotCount = level.maxShotCount;
             enemyCount = level.enemyCount;
+        }
+
+        public void AddShotCount(int amountToAdd)
+        {
+            maxShotCount += amountToAdd;
+        }
+
+        public void ChangeGameStatus(bool isGameRunning)
+        {
+            _isGameRunning = isGameRunning;
         }
     }
 }
