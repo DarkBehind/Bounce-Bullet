@@ -34,10 +34,8 @@ namespace S_Durlanik.UI
 
         public void Button_OnClaim()
         {
-            InventoryManager.Instance.PurchaseItem(rewardItem,true);
-            LevelManager.Instance.ReturnToMenu();
+            ClaimRewardAndNextLevel(rewardItem);
             CloseScreen();
-
         }
 
         public void Button_DoubleClaim()
@@ -47,11 +45,17 @@ namespace S_Durlanik.UI
             {
                 InventoryItem doubleReward = rewardItem;
                 doubleReward.stackAmount *= 2;
-                InventoryManager.Instance.PurchaseItem(doubleReward,true);
-                LevelManager.Instance.ReturnToMenu();
+                ClaimRewardAndNextLevel(doubleReward);
                 ButtonsStatus(true);
                 CloseScreen();
             });
+        }
+        
+        void ClaimRewardAndNextLevel(InventoryItem reward)
+        {
+            InventoryManager.Instance.PurchaseItem(reward,true);
+            LevelManager.Instance.LoadNextLevel();
+            CloseScreen();
         }
         
         void ButtonsStatus(bool status)

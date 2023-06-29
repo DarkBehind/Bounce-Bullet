@@ -20,7 +20,6 @@ namespace S_Durlanik.Game
         [HideInInspector] public int enemyCount;
 
         private bool _isGameRunning;
-        int _currentLevel;
         Level _currentLevelObject;
         private void OnEnable()
         {
@@ -88,6 +87,10 @@ namespace S_Durlanik.Game
         {
             return PlayerPrefs.GetInt(Extensions.Prefs.Level, 1);
         }
+        public void SetCurrentLevel(int levelNumber)
+        {
+            PlayerPrefs.SetInt(Extensions.Prefs.Level, levelNumber);
+        }
 
         public void LoadLevel(int levelNumber)
         {
@@ -99,7 +102,6 @@ namespace S_Durlanik.Game
             {
                 OnLevelStarted?.Invoke();
                 _isGameRunning = true;
-                _currentLevel = levelNumber;
                 _currentLevelObject = levelToLoad;
                 InvokeRepeating(nameof(CheckLevelFailed), 1, 1f);
             }
@@ -114,17 +116,25 @@ namespace S_Durlanik.Game
         public void RestartLevel()
         {
             UI_System.Instance.GoToPlayScreen();
-            LoadLevel(_currentLevel);
+            LoadLevel(GetCurrentLevel());
         }
 
         public void ReturnToMenu()
         {
             UI_System.Instance.GoToMainScreen();
         }
+        
+        public void LoadNextLevel()
+        {
+            SetCurrentLevel(GetCurrentLevel() + 1);
+            LoadLevel(GetCurrentLevel());
+        }
         private void SetLevelProperties(Level level)
         {
             maxShotCount = level.maxShotCount;
             enemyCount = level.enemyCount;
+            
+            playTopBar.UpdateBulletCountText();
         }
 
         public void AddShotCount(int amountToAdd)
