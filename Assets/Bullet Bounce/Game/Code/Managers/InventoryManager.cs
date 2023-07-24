@@ -170,6 +170,11 @@ namespace S_Durlanik.Game
     {
         public Sprite itemSprite;
     }
+    [Serializable]
+    public class RewardItem : InventoryItem
+    {
+        public Sprite itemSprite;
+    }
     
     
 }

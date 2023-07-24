@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/InventoryManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SceneManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyLoginUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyLoginUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,9 +13,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ae5d4e782f74095b2c8d38f4225786f16e200/92/23fe11ae/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7fbcd1d5c764324ac3af6826a20de0b10fc00/ce/de77b875/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/ADS.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyFreeCoinUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/SpinSlotItemUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,7 +82,7 @@
       <workItem from="1687899910572" duration="11734000" />
       <workItem from="1687979941490" duration="4847000" />
       <workItem from="1690227793498" duration="2384000" />
-      <workItem from="1690233234320" duration="5445000" />
+      <workItem from="1690233234320" duration="7867000" />
     </task>
     <servers />
   </component>

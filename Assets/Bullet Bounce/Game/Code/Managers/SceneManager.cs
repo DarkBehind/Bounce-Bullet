@@ -14,6 +14,7 @@ namespace S_Durlanik.Game
 
         [Header("Screens")]
         public UI_Screen dailyLoginScreen;
+        public DailyFreeCoinUI dailyFreeCoinUI;
 
         [Header("Frame")] 
         public GameObject topWall;
@@ -43,6 +44,7 @@ namespace S_Durlanik.Game
            SetPosition();
            SetScale();
            Invoke(nameof(CheckDailyReward), 1);
+           dailyFreeCoinUI.CheckDailyFreeCoin();
         }
 
         private void SetPosition()
@@ -155,6 +157,9 @@ namespace S_Durlanik.Game
             public const string TotalClaimedDailyReward = "TotalClaimedDays";
             public const string Level = "Level";
             public static string CurrentDayRewardTaken => GetCurrentDay() + "_RewardTaken";
+            
+            // Free Coin
+            public const string FreeCoinLastClaimedDay = "FreeCoinLastClaimedDay";
         }
         
         public static void ClearChilderen(Transform transform)
@@ -199,6 +204,12 @@ namespace S_Durlanik.Game
         
             Debug.Log("Total claimed days: " + PlayerPrefs.GetInt(Prefs.TotalClaimedDailyReward));
             PlayerPrefs.SetString(Prefs.LastClaimedDailyReward, GetCurrentDayByDate());
+            PlayerPrefs.Save();
+        }
+        
+        public static void SetFreeCoinLastClaimedDay()
+        {
+            PlayerPrefs.SetString(Prefs.FreeCoinLastClaimedDay, GetCurrentDayByDate());
             PlayerPrefs.Save();
         }
         
