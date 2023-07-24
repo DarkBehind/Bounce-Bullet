@@ -2,12 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class ADS : MonoBehaviour
 {
     string bannerAdUnitId = "c1586ad841a06c22"; // Retrieve the ID from your account
     public Rewarded rewarded;
-    
     public static ADS Instance;
     private void Awake()
     {
