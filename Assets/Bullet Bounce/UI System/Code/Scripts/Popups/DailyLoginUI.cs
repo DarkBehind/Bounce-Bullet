@@ -22,7 +22,7 @@ namespace S_Durlanik.UI
         public override void StartScreen()
         {
             base.StartScreen();
-            SetDailyLoginUI();
+            SetDailyLoginUI();  
         }
         
         public override void CloseScreen()

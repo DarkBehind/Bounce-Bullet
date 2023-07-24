@@ -117,21 +117,19 @@ namespace S_Durlanik.Game
                 }
 
                 string lastClaimedDay = PlayerPrefs.GetString(Extensions.Prefs.LastClaimedDailyReward);
-            
-                //lastClaimedDay = "13.10.2022"; // test bittiginde bu satir silinecek
-                string currentDay = DateTime.Now.ToShortDateString();
 
-                print("last claimed day: " + lastClaimedDay);
-                print("current day: " + currentDay);
+                string currentDay = Extensions.GetCurrentDayByDate();
+
                 if (!string.Equals(lastClaimedDay,currentDay))
                 {
+                    Extensions.IncreaseCurrentDay();
                     UI_System.Instance.SwitchScreens(dailyLoginScreen);
                 }
-            
             }
             else
             {
                 PlayerPrefs.SetInt(Extensions.Prefs.TotalClaimedDailyReward, 0);
+                PlayerPrefs.SetInt(Extensions.Prefs.CurrentDay, 1);
                 UI_System.Instance.SwitchScreens(dailyLoginScreen);
             }
         }
@@ -173,11 +171,17 @@ namespace S_Durlanik.Game
         
         public static int GetCurrentDay()
         {
-            return PlayerPrefs.GetInt(Prefs.CurrentDay, 1);
+            return PlayerPrefs.GetInt(Prefs.CurrentDay,1);
+        }
+
+        public static string GetCurrentDayByDate()
+        {
+            return DateTime.Now.ToShortDateString();
         }
         
         public static void IncreaseCurrentDay()
         {
+            Debug.Log("Increasing current day is "+ GetCurrentDay());
             PlayerPrefs.SetInt(Prefs.CurrentDay, GetCurrentDay() + 1);
             PlayerPrefs.Save();
         }
@@ -194,7 +198,7 @@ namespace S_Durlanik.Game
             PlayerPrefs.SetInt(Prefs.TotalClaimedDailyReward, totalClaimedDays + 1);
         
             Debug.Log("Total claimed days: " + PlayerPrefs.GetInt(Prefs.TotalClaimedDailyReward));
-            PlayerPrefs.SetString(Prefs.LastClaimedDailyReward, DateTime.Now.ToShortDateString());
+            PlayerPrefs.SetString(Prefs.LastClaimedDailyReward, GetCurrentDayByDate());
             PlayerPrefs.Save();
         }
         
