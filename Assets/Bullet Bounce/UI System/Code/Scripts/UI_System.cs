@@ -71,10 +71,13 @@ namespace S_Durlanik.UI
 
 
         #region Helper Methods
+        public bool _screenSwitching = false;
         public void SwitchScreens(UI_Screen aScreen)
         {
             if(aScreen)
             {
+                if (_screenSwitching) return;
+                _screenSwitching = true;
                 if(_currentScreen)
                 {
                     if (_currentScreen.name != "Main_Screen")
@@ -96,7 +99,18 @@ namespace S_Durlanik.UI
 
                 Debug.Log("Current Screen: " + _currentScreen.name);
                 OnSwitchedScreen?.Invoke();
+                StartCoroutine(WaitToSwitchScreens(_currentScreen));
             }
+        }
+        
+        IEnumerator WaitToSwitchScreens(UI_Screen aScreen)
+        {
+            while (aScreen.GetComponent<CanvasGroup>().alpha < 1)
+            {
+                print("Current Screen alpha and name: "+aScreen.name +" " + aScreen.GetComponent<CanvasGroup>().alpha);
+                yield return new WaitForSeconds(.05f);
+            }
+            _screenSwitching = false;
         }
 
         public void FadeIn()

@@ -53,15 +53,18 @@ namespace S_Durlanik.UI
             Debug.Log("Offer bought: " + _itemCode);
             // market satin alma ekrani acilacak, basarili olursa satin alindi popupini gosterecegiz
         }
-
+        bool _clicked = false;
         public void OnWatchAds()
         {
+            if (_clicked) return;
+            _clicked = true;
             Debug.Log("Watch ads for: " + _itemCode);
             ADS.Instance.rewarded.LoadRewardedAd(null, () =>
             {
                 InventoryManager.Instance.AddGold(_goldAmount);
                 InventoryManager.Instance.ShowItemClaimPopup(icon.sprite, _goldAmount);
                 Debug.Log("Reward earned: " + _itemCode);
+                _clicked = false;
             });
         }
     }

@@ -3440,9 +3440,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 654508013}
-  - component: {fileID: 654508016}
+  - component: {fileID: 654508017}
   - component: {fileID: 654508015}
-  - component: {fileID: 654508014}
+  - component: {fileID: 654508016}
   m_Layer: 0
   m_Name: Play_Screen
   m_TagString: Untagged
@@ -3471,7 +3471,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &654508014
+--- !u!225 &654508015
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654508012}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!95 &654508016
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -3481,7 +3493,7 @@ Animator:
   m_GameObject: {fileID: 654508012}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aac05430cee319342a13e042047deba3, type: 2}
+  m_Controller: {fileID: 22100000, guid: b8e8a1453ba11d1449a5b4c7e10d4080, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3491,19 +3503,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!225 &654508015
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654508012}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!114 &654508016
+--- !u!114 &654508017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3516,6 +3516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
+  screenSwitching: 0
 --- !u!1 &661315193
 GameObject:
   m_ObjectHideFlags: 0
@@ -3903,6 +3904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
+  screenSwitching: 0
 --- !u!1 &717569620
 GameObject:
   m_ObjectHideFlags: 0
@@ -13882,6 +13884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
+  screenSwitching: 0
   notificationGameObject: {fileID: 307861366559063998}
   claimButton: {fileID: 97397575}
   _currentReward:
@@ -17560,6 +17563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playTopBar: {fileID: 797773346}
+  playScreen: {fileID: 654508017}
   levelsParent: {fileID: 1494000232}
   maxShotCount: 0
   enemyCount: 0
@@ -17593,7 +17597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startScreen: {fileID: 714074211}
-  playScreen: {fileID: 654508016}
+  playScreen: {fileID: 654508017}
   goldAmountTexts:
   - {fileID: 4542144263245204291}
   - {fileID: 58079101}
@@ -17601,6 +17605,7 @@ MonoBehaviour:
   fader: {fileID: 35034390}
   fadeInDuration: 1
   fadeOutDuration: 0.5
+  _screenSwitching: 0
 --- !u!4 &1621925480
 Transform:
   m_ObjectHideFlags: 0
@@ -46769,6 +46774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
+  screenSwitching: 0
   allGoldOffers:
   - itemCode: GoldOffer0
     goldAmount: 500
@@ -52079,6 +52085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
+  screenSwitching: 0
   gameOverPart1: {fileID: 226728962}
   gameOverPart2: {fileID: 472068857}
   bulletPrice: 100
@@ -92175,6 +92182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
+  screenSwitching: 0
   rewardAmountText: {fileID: 1043366688}
   rewardItem:
     itemCode: currencyGold
@@ -98468,7 +98476,7 @@ MonoBehaviour:
         m_MethodName: SwitchScreens
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 654508016}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: S_Durlanik.UI.UI_Screen, BulletBounce
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -98666,6 +98674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
+  screenSwitching: 0
   settingsUI: {fileID: 1590913393109392019}
 --- !u!225 &2530574701794018926
 CanvasGroup:
@@ -100663,6 +100672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
+  screenSwitching: 0
   dailyLoginRewards:
   - day: 1
     amount: 50
@@ -101775,6 +101785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
+  screenSwitching: 0
 --- !u!225 &3176310078111916586
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -102279,6 +102290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
+  screenSwitching: 0
   exampleLevelListItemUI: {fileID: 3375258144872089526}
 --- !u!225 &3375258144341756696
 CanvasGroup:
@@ -113635,7 +113647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 154.5, y: 0}
   m_SizeDelta: {x: 0, y: 64}
   m_Pivot: {x: 0.5, y: 0.50000125}
 --- !u!114 &4542144261724530065
@@ -152122,6 +152134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
+  screenSwitching: 0
   wheel: {fileID: 9040205095490698546}
   spinButton: {fileID: 1851299742}
   freeSpinButton: {fileID: 9040205096370372432}

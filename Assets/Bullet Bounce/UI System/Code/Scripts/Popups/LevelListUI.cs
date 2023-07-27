@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using S_Durlanik.Game;
@@ -8,9 +9,9 @@ public class LevelListUI : PopupScreen
 {
     public LevelListItemUI exampleLevelListItemUI;
 
-    public override void StartScreen()
+    public override void StartScreen(Action onStarted = null)
     {
-        base.StartScreen();
+        base.StartScreen(onStarted);
         SetLevelListUI();
     }
 

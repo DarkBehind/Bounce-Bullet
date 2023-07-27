@@ -20,9 +20,9 @@ namespace S_Durlanik.UI
         {
             Instance = this;
         }
-        public override void StartScreen()
+        public override void StartScreen(Action onStarted = null)
         {
-            base.StartScreen();
+            base.StartScreen(onStarted);
 
             StartCoroutine(SetStoreUI());
         }

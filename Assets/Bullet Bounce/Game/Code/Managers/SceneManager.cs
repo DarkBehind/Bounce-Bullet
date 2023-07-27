@@ -43,7 +43,7 @@ namespace S_Durlanik.Game
         {
            SetPosition();
            SetScale();
-           Invoke(nameof(CheckDailyReward), 1);
+           Invoke(nameof(CheckDailyReward), .1f);
            dailyFreeCoinUI.CheckDailyFreeCoin();
         }
 
@@ -162,7 +162,7 @@ namespace S_Durlanik.Game
             public const string FreeCoinLastClaimedDay = "FreeCoinLastClaimedDay";
         }
         
-        public static void ClearChilderen(Transform transform)
+        public static void ClearChildren(Transform transform)
         {
             foreach (Transform child in transform)
             {

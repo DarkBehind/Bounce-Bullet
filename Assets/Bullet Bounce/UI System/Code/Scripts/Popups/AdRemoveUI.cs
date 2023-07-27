@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,14 +8,14 @@ namespace S_Durlanik.UI
 
     public class AdRemoveUI : PopupScreen
     {
-        public override void StartScreen()
+        public override void StartScreen(Action onStarted = null)
         {
-            base.StartScreen();
+            base.StartScreen(onStarted);
         }
         
-        public override void CloseScreen()
+        public override void CloseScreen(Action onClosed = null)
         {
-            base.CloseScreen();
+            base.CloseScreen(onClosed);
         }
 
         public void OnRemoveAdsComplete()

@@ -19,15 +19,15 @@ namespace S_Durlanik.UI
         public GameObject todayClaimedWarning;
         
         private DailyLoginReward _currentReward;
-        public override void StartScreen()
+        public override void StartScreen(Action onStarted = null)
         {
-            base.StartScreen();
+            base.StartScreen(onStarted);
             SetDailyLoginUI();  
         }
         
-        public override void CloseScreen()
+        public override void CloseScreen(Action onClosed = null)
         {
-            base.CloseScreen();
+            base.CloseScreen(onClosed);
         }
         
         private void SetDailyLoginUI()

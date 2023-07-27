@@ -14,6 +14,7 @@ namespace S_Durlanik.Game
         public static event Action OnLevelFailed;
 
         public PlayTopBar playTopBar;
+        public UI_Screen playScreen;
 
         public Transform levelsParent;
         [HideInInspector] public int maxShotCount;
@@ -42,6 +43,7 @@ namespace S_Durlanik.Game
             {
                 OnLevelCompleted?.Invoke();
                 Debug.Log("Level Completed!");
+                SetCurrentLevel(GetCurrentLevel() + 1);
             }
         }
 
@@ -97,7 +99,7 @@ namespace S_Durlanik.Game
             if(_currentLevelObject)
                 Destroy(_currentLevelObject.gameObject);
             Level levelToLoad = Instantiate(Resources.Load<Level>("Levels/Level" + levelNumber), levelsParent);
-
+            playScreen.HandleAnimator("show");
             if (levelToLoad)
             {
                 OnLevelStarted?.Invoke();
@@ -122,11 +124,12 @@ namespace S_Durlanik.Game
         public void ReturnToMenu()
         {
             UI_System.Instance.GoToMainScreen();
+            playScreen.HandleAnimator("hide");
+
         }
         
         public void LoadNextLevel()
         {
-            SetCurrentLevel(GetCurrentLevel() + 1);
             LoadLevel(GetCurrentLevel());
         }
         private void SetLevelProperties(Level level)

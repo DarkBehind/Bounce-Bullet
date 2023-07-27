@@ -14,6 +14,7 @@ namespace S_Durlanik.UI
         [SerializeField] InventoryItem rewardItem;
         [SerializeField] Button claimButton;
         [SerializeField] Button doubleClaimButton;
+        private bool clicked = false;
         private void OnEnable()
         {
             LevelManager.OnLevelCompleted += OnLevelCompleted;
@@ -29,17 +30,25 @@ namespace S_Durlanik.UI
 
         private void OnLevelCompleted()
         {
-            StartScreen();
+            if(clicked) return;
+            clicked = true;
+            StartScreen(() =>
+            {
+                clicked = false;
+            });
         }
 
         public void Button_OnClaim()
         {
+            if(clicked) return;
+            clicked = true;
             ClaimRewardAndNextLevel(rewardItem);
-            CloseScreen();
         }
 
         public void Button_DoubleClaim()
         {
+            if(clicked) return;
+            clicked = true;
             ButtonsStatus(false);
             ADS.Instance.rewarded.LoadRewardedAd(null, () =>
             {
@@ -47,7 +56,6 @@ namespace S_Durlanik.UI
                 doubleReward.stackAmount *= 2;
                 ClaimRewardAndNextLevel(doubleReward);
                 ButtonsStatus(true);
-                CloseScreen();
             });
         }
         
@@ -55,7 +63,10 @@ namespace S_Durlanik.UI
         {
             InventoryManager.Instance.PurchaseItem(reward,true);
             LevelManager.Instance.LoadNextLevel();
-            CloseScreen();
+            CloseScreen(() =>
+            {
+                clicked = false;
+            });
         }
         
         void ButtonsStatus(bool status)

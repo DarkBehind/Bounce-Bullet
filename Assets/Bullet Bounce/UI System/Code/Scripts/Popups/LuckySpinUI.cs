@@ -12,16 +12,16 @@ namespace S_Durlanik.UI
 
     public class LuckySpinUI : PopupScreen
     {
-        public override void StartScreen()
+        public override void StartScreen(Action onStarted = null)
         {
-            base.StartScreen();
+            base.StartScreen(onStarted);
             
             spinSlotItems.ForEach(x => x.SetSpinSlotUI(rewardItems[x.slotID]));
         }
         
-        public override void CloseScreen()
+        public override void CloseScreen(Action onClosed = null)
         {
-            base.CloseScreen();
+            base.CloseScreen(onClosed);
         }
 
         public Transform wheel; // cark transform'u

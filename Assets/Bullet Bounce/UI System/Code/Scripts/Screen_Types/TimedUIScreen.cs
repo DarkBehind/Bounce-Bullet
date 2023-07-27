@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using S_Durlanik.UI;
 using UnityEngine;
@@ -18,9 +19,9 @@ namespace S_Durlanik.UI
         #endregion
 
         #region Helper Methods
-        public override void StartScreen()
+        public override void StartScreen(Action onCompleted = null)
         {
-            base.StartScreen();
+            base.StartScreen(onCompleted);
 
             _startTime = Time.time;
             StartCoroutine(WaitForTime());

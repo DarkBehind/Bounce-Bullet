@@ -3,31 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SceneManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.IOSResolver.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.IOSResolver.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.JarResolver.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.JarResolver.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.PackageManagerResolver.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.PackageManagerResolver.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/play-services-resolver_v1.2.137.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/play-services-resolver_v1.2.137.0.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.applovin.applovin-sdk-11.11.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.applovin.applovin-sdk-11.11.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json AOT.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json AOT/Newtonsoft.Json.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json AOT/Newtonsoft.Json.deps.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json AOT/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json AOT/Newtonsoft.Json.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json AOT/Newtonsoft.Json.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json AOT/Newtonsoft.Json.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json Editor/Newtonsoft.Json.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json Editor/Newtonsoft.Json.deps.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json Editor/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json Editor/Newtonsoft.Json.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json Editor/Newtonsoft.Json.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Newtonsoft.Json Editor/Newtonsoft.Json.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Art/Animation/SD_Base_Screen_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Art/Animation/SD_Base_Screen_Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Art/Animation/SD_Play_Screen_Controller 1.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Art/Animation/SD_Play_Screen_Controller 1.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Items/StoreGoldItemUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Items/StoreGoldItemUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/AdRemoveUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/AdRemoveUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyFreeCoinUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyFreeCoinUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyLoginUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyLoginUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/GameOverUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/GameOverUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/LevelListUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/LevelListUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/LuckySpinUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/LuckySpinUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/StageClearUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/StageClearUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Screen_Types/StoreScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Screen_Types/StoreScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Screen_Types/TimedUIScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Screen_Types/TimedUIScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/UI_Screen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/UI_Screen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/UI_System.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/UI_System.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +29,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ae5d4e782f74095b2c8d38f4225786f16e200/92/23fe11ae/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/0c/b86bb2b8/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7fbcd1d5c764324ac3af6826a20de0b10fc00/ce/de77b875/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/ADS.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyFreeCoinUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/SpinSlotItemUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@4.9.3/Runtime/Codeless/CodelessIAPButton.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -106,6 +101,8 @@
       <workItem from="1690227793498" duration="2384000" />
       <workItem from="1690233234320" duration="8503000" />
       <workItem from="1690414444509" duration="1101000" />
+      <workItem from="1690467303862" duration="1049000" />
+      <workItem from="1690484964462" duration="10654000" />
     </task>
     <servers />
   </component>
