@@ -14,15 +14,10 @@ namespace S_Durlanik.UI
         {
             settingsUI.SetActive(true);
         }
-        
-        public void OnContinue()
-        {
-            
-        }
 
         public void OnRestart()
         {
-            
+            LevelManager.Instance.RestartLevel();
         }
 
         public void OnMenu()
