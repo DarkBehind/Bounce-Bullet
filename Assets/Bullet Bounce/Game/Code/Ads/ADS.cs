@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GoogleMobileAds.Api;
 using UnityEngine;
 public class ADS : MonoBehaviour
 {
-    string bannerAdUnitId = "c1586ad841a06c22"; // Retrieve the ID from your account
     public Rewarded rewarded;
+    public InterstitialAds interstitialAds;
     public static ADS Instance;
     
     
@@ -16,26 +17,10 @@ public class ADS : MonoBehaviour
 
     void Start()
     {
-        MaxSdkCallbacks.OnSdkInitializedEvent += (MaxSdkBase.SdkConfiguration sdkConfiguration) =>
+        MobileAds.Initialize((InitializationStatus initStatus) =>
         {
-            
-            // AppLovin SDK is initialized, start loading ads
-            // Banners are automatically sized to 320×50 on phones and 728×90 on tablets
-            // You may call the utility method MaxSdkUtils.isTablet() to help with view sizing adjustments
-            
-            // BANNER BURADA 
-            //MaxSdk.CreateBanner(bannerAdUnitId, MaxSdkBase.BannerPosition.TopLeft);
-
-            // Set background or background color for banners to be fully functional
-            
-            // BANNER DEVAMI
-            //MaxSdk.SetBannerBackgroundColor(bannerAdUnitId, Color.black);
-            //MaxSdk.ShowBanner(bannerAdUnitId);
-        };
-
-        MaxSdk.SetSdkKey("Fyp9XLskmI1hmkqgwflTdIZ1JG6J1zBqT_Laz2JUTPr8nfq_th78w26gsLUITnmkGynAWu8alqUM10x2w08THf");
-        MaxSdk.SetUserId("USER_ID");
-        MaxSdk.InitializeSdk();
+            // This callback is called once the MobileAds SDK is initialized.
+        });
     }
 
     public void RemoveAds()

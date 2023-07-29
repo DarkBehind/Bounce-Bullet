@@ -1,86 +1,124 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GoogleMobileAds.Api;
 using UnityEngine;
 
 public class Rewarded : MonoBehaviour
 {
 
-    string adUnitId = "1882960987cccae9";
-    int retryAttempt;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Attach callback
-        MaxSdkCallbacks.Rewarded.OnAdLoadedEvent += OnRewardedAdLoadedEvent;
-        MaxSdkCallbacks.Rewarded.OnAdLoadFailedEvent += OnRewardedAdLoadFailedEvent;
-        MaxSdkCallbacks.Rewarded.OnAdDisplayedEvent += OnRewardedAdDisplayedEvent;
-        MaxSdkCallbacks.Rewarded.OnAdClickedEvent += OnRewardedAdClickedEvent;
-        MaxSdkCallbacks.Rewarded.OnAdRevenuePaidEvent += OnRewardedAdRevenuePaidEvent;
-        MaxSdkCallbacks.Rewarded.OnAdHiddenEvent += OnRewardedAdHiddenEvent;
-        MaxSdkCallbacks.Rewarded.OnAdDisplayFailedEvent += OnRewardedAdFailedToDisplayEvent;
-        MaxSdkCallbacks.Rewarded.OnAdReceivedRewardEvent += OnRewardedAdReceivedRewardEvent;
-
-        // Load the first rewarded ad
-
-
-    }
+    // These ad units are configured to always serve test ads.
+#if UNITY_ANDROID
+    private string _adUnitId = "ca-app-pub-3940256099942544/5224354917";
+#elif UNITY_IPHONE
+  private string _adUnitId = "ca-app-pub-3940256099942544/1712485313";
+#else
+  private string _adUnitId = "unused";
+#endif
+    
     Action _onRewardedAdLoadedEvent;
     Action _onRewardedAdReceivedRewardEvent;
     public void LoadRewardedAd(Action onRewardedAdLoadedEvent = null,Action onRewardedAdReceivedRewardEvent = null)
     {
         _onRewardedAdLoadedEvent = onRewardedAdLoadedEvent;
         _onRewardedAdReceivedRewardEvent = onRewardedAdReceivedRewardEvent;
-        MaxSdk.LoadRewardedAd(adUnitId);
+
+        RequestRewardedAd();
     }
+    
+    private RewardedAd rewardedAd;
 
-    private void OnRewardedAdLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
+    /// <summary>
+    /// Loads the rewarded ad.
+    /// </summary>
+    void RequestRewardedAd()
     {
-        // Rewarded ad is ready for you to show. MaxSdk.IsRewardedAdReady(adUnitId) now returns 'true'.
-        MaxSdk.ShowRewardedAd(adUnitId);
-        // Reset retry attempt
-        retryAttempt = 0;
-        
-        _onRewardedAdLoadedEvent?.Invoke();
+        // Clean up the old ad before loading a new one.
+        if (rewardedAd != null)
+        {
+            rewardedAd.Destroy();
+            rewardedAd = null;
+        }
+
+        Debug.Log("Loading the rewarded ad.");
+
+        // create our request used to load the ad.
+        var adRequest = new AdRequest();
+        adRequest.Keywords.Add("unity-admob-sample");
+
+        // send the request to load the ad.
+        RewardedAd.Load(_adUnitId, adRequest,
+            (RewardedAd ad, LoadAdError error) =>
+            {
+                // if error is not null, the load request failed.
+                if (error != null || ad == null)
+                {
+                    Debug.LogError("Rewarded ad failed to load an ad " +
+                                   "with error : " + error);
+                    return;
+                }
+
+                Debug.Log("Rewarded ad loaded with response : "
+                          + ad.GetResponseInfo());
+                rewardedAd = ad;
+                RegisterEventHandlers(rewardedAd);
+                
+                ShowRewardedAd();
+                
+                _onRewardedAdLoadedEvent?.Invoke();
+            });
     }
-
-    private void OnRewardedAdLoadFailedEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo)
+    void ShowRewardedAd()
     {
-        // Rewarded ad failed to load 
-        // AppLovin recommends that you retry with exponentially higher delays, up to a maximum delay (in this case 64 seconds).
+        const string rewardMsg =
+            "Rewarded ad rewarded the user. Type: {0}, amount: {1}.";
 
-        retryAttempt++;
-        double retryDelay = Math.Pow(2, Math.Min(6, retryAttempt));
-
-        Invoke("LoadRewardedAd", (float)retryDelay);
+        if (rewardedAd != null && rewardedAd.CanShowAd())
+        {
+            rewardedAd.Show((Reward reward) =>
+            {
+                // TODO: Reward the user.
+                Debug.Log(String.Format(rewardMsg, reward.Type, reward.Amount));
+                
+                _onRewardedAdReceivedRewardEvent?.Invoke();
+            });
+        }
     }
-
-    private void OnRewardedAdDisplayedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo) { }
-
-    private void OnRewardedAdFailedToDisplayEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo, MaxSdkBase.AdInfo adInfo)
+    
+    private void RegisterEventHandlers(RewardedAd ad)
     {
-        // Rewarded ad failed to display. AppLovin recommends that you load the next ad.
-        LoadRewardedAd();
-    }
-
-    private void OnRewardedAdClickedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo) { }
-
-    private void OnRewardedAdHiddenEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
-    {
-        // Rewarded ad is hidden. Pre-load the next ad
-       
-    }
-
-    private void OnRewardedAdReceivedRewardEvent(string adUnitId, MaxSdk.Reward reward, MaxSdkBase.AdInfo adInfo)
-    {
-        // The rewarded ad displayed and the user should receive the reward.
-        _onRewardedAdReceivedRewardEvent?.Invoke();
-    }
-
-    private void OnRewardedAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
-    {
-        // Ad revenue paid. Use this callback to track user revenue.
-        
+        // Raised when the ad is estimated to have earned money.
+        ad.OnAdPaid += (AdValue adValue) =>
+        {
+            Debug.Log(String.Format("Rewarded ad paid {0} {1}.",
+                adValue.Value,
+                adValue.CurrencyCode));
+        };
+        // Raised when an impression is recorded for an ad.
+        ad.OnAdImpressionRecorded += () =>
+        {
+            Debug.Log("Rewarded ad recorded an impression.");
+        };
+        // Raised when a click is recorded for an ad.
+        ad.OnAdClicked += () =>
+        {
+            Debug.Log("Rewarded ad was clicked.");
+        };
+        // Raised when an ad opened full screen content.
+        ad.OnAdFullScreenContentOpened += () =>
+        {
+            Debug.Log("Rewarded ad full screen content opened.");
+        };
+        // Raised when the ad closed full screen content.
+        ad.OnAdFullScreenContentClosed += () =>
+        {
+            Debug.Log("Rewarded ad full screen content closed.");
+        };
+        // Raised when the ad failed to open full screen content.
+        ad.OnAdFullScreenContentFailed += (AdError error) =>
+        {
+            Debug.LogError("Rewarded ad failed to open full screen content " +
+                           "with error : " + error);
+        };
     }
 }
