@@ -39,6 +39,11 @@ namespace S_Durlanik.Game
                 }
             }
             
+            // rotation of bullet after collision
+            var contactPoint = col.GetContact(0);
+            var rotation = Quaternion.FromToRotation(Vector2.right, contactPoint.normal);
+            transform.rotation = rotation;
+
             CheckBounces();
         }
 

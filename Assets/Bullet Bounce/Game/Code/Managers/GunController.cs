@@ -13,7 +13,8 @@ namespace S_Durlanik.Game
         public float maxBounces = 3f;
         public GameObject lineObjectPrefab;
         public float lineWidth = 1f;
-
+        public Animator gunAnimator;
+        
         private Rigidbody2D _playerRigidbody;
         private GameObject _lineObject;
         private LineRenderer _lineRenderer;
@@ -61,6 +62,7 @@ namespace S_Durlanik.Game
 
         private void AimAndFire()
         {
+            gunAnimator.SetTrigger("Shoot");
             Bullet bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation,transform.parent.parent);
             bullet.maxBounces = Mathf.RoundToInt(maxBounces);
             Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
@@ -79,6 +81,7 @@ namespace S_Durlanik.Game
         private void ShowAimLine()
         {
             _lineObject.SetActive(true);
+            gunAnimator.SetBool("Aim",true);
             Vector2 position = firePoint.position;
 
             Vector2 direction = transform.right; 
@@ -93,6 +96,7 @@ namespace S_Durlanik.Game
 
         private void HideAimLine()
         {
+            gunAnimator.SetBool("Aim",false);
             _lineObject.SetActive(false);
         }
     }

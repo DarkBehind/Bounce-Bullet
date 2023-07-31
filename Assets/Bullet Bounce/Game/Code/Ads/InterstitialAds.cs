@@ -6,9 +6,9 @@ using UnityEngine;
 public class InterstitialAds : MonoBehaviour
 {
 #if UNITY_ANDROID
-    private string _adUnitId = "ca-app-pub-3940256099942544/1033173712";
+    private string _adUnitId = "ca-app-pub-6243261579893342/5553360068";
 #elif UNITY_IPHONE
-  private string _adUnitId = "ca-app-pub-3940256099942544/4411468910";
+  private string _adUnitId = "ca-app-pub-6243261579893342/3481676595";
 #else
   private string _adUnitId = "unused";
 #endif

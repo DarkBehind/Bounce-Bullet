@@ -37,6 +37,7 @@ namespace S_Durlanik.Game
             _screenWidth = _screenHeight * _camera.aspect;
             
             topWall.transform.parent.gameObject.SetActive(true);
+            Application.targetFrameRate = 60;
         }
 
         public void Start()

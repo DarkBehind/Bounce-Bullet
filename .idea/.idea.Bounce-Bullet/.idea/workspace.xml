@@ -3,180 +3,73 @@
   <component name="ChangeListManager">
     <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/ADS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/ADS.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/Interstitial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/Interstitial.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Main_Character/Player Bow/idle/player_bow_idle_7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/InterstitialAds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/InterstitialAds.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/Rewarded.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/Rewarded.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.IOSResolver.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.IOSResolver.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.JarResolver.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.JarResolver.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.PackageManagerResolver.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.PackageManagerResolver.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.VersionHandlerImpl.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.174/Google.VersionHandlerImpl.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/LICENSE.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/LICENSE.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/README.md.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.174_manifest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.174_manifest.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Editor/Dependencies.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Editor/Dependencies.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/Android.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/Android/applovin-max-unity-plugin.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/Android/applovin-max-unity-plugin.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityAdManager.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityAdManager.h.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityAdManager.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityAdManager.m.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityPlugin.mm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityPlugin.mm.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Mediation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Mediation/MediationAdapters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Mediation/MediationAdapters.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/BannerBottom.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/BannerBottom.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/BannerTop.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/BannerTop.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/Interstitial.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/Interstitial.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/Rewarded.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/Rewarded.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Resources/AppLovinSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Resources/AppLovinSettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images/alert_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images/alert_icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images/uninstall_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images/uninstall_icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images/warning_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images/warning_icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxInitialization.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxInitialization.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxPostProcessBuildAndroid.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxPostProcessBuildAndroid.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxPostProcessBuildiOS.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxPostProcessBuildiOS.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxSdk.Scripts.Editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxSdk.Scripts.Editor.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinAutoUpdater.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinAutoUpdater.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinCommandLine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinCommandLine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinDownloadHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinDownloadHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinEditorCoroutine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinEditorCoroutine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinIntegrationManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinIntegrationManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinIntegrationManagerWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinIntegrationManagerWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinInternalSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinInternalSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinMenuItems.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinMenuItems.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinPostProcessAndroidGradle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinPostProcessAndroidGradle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinPostProcessiOS.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinPostProcessiOS.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinPreProcessAndroid.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinPreProcessAndroid.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinProcessGradleBuildFile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinProcessGradleBuildFile.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/MaxSdk.IntegrationManager.Editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/MaxSdk.IntegrationManager.Editor.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxEventSystemChecker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxEventSystemChecker.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdk.Scripts.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdk.Scripts.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdk.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdk.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkAndroid.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkAndroid.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkCallbacks.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkCallbacks.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkLogger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkLogger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkUnityEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkUnityEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkUtils.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkUtils.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkiOS.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkiOS.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxTargetingData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxTargetingData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxUserSegment.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxUserSegment.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxUserServiceAndroid.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxUserServiceAndroid.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxUserServiceUnityEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxUserServiceUnityEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxUserServiceiOS.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxUserServiceiOS.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxVariableServiceAndroid.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxVariableServiceAndroid.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxVariableServiceUnityEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxVariableServiceUnityEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxVariableServiceiOS.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxVariableServiceiOS.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/ThirdParty.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/ThirdParty/MiniJSON.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/ThirdParty/MiniJSON.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Version.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Version.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-1.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-1.1.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-common-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-common-2.0.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-runtime-2.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-runtime-2.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.collection.collection-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.collection.collection-1.0.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-1.2.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-1.2.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.0.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.applovin.applovin-sdk-11.11.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.applovin.applovin-sdk-11.11.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-17.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-17.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-appset-16.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-appset-16.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-base-17.6.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-base-17.6.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-basement-17.6.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-basement-17.6.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-tasks-17.2.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-tasks-17.2.1.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Box_Obstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Box_Obstacle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Circle_Obstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Circle_Obstacle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Destroyable_Box_Obstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Destroyable_Box_Obstacle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Platform_Default.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Platform_Default.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Platform_Rigidbody.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Platform_Rigidbody.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Tnt.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Tnt.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level11.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level11.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level12.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level12.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level13.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level13.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level14.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level14.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level15.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level15.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level16.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level16.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level17.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level17.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level18.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level18.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level19.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level19.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level20.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level20.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level21.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level21.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level22.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level22.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level23.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level23.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level24.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level24.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level25.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level25.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level9.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Android.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Android.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Common.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Common.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Android.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Android.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Unity.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Unity.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Ump.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Ump.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Ump.iOS.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Ump.iOS.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.iOS.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.iOS.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.2.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.2.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,6 +154,8 @@
       <workItem from="1690484964462" duration="10654000" />
       <workItem from="1690664115762" duration="1657000" />
       <workItem from="1690669967124" duration="2767000" />
+      <workItem from="1690830607185" duration="2006000" />
+      <workItem from="1690833740104" duration="2664000" />
     </task>
     <servers />
   </component>
