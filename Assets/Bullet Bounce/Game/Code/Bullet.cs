@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace S_Durlanik.Game
@@ -9,11 +10,17 @@ namespace S_Durlanik.Game
 
         private int _bounces = 0;
         private Rigidbody2D _rb;
-
+        Vector2 direction;
+        Vector2 lastVelocity;
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
             _rb.AddForce(transform.right * speed, ForceMode2D.Impulse);
+        }
+
+        private void LateUpdate()
+        {
+            lastVelocity = _rb.velocity;
         }
 
         private void OnCollisionEnter2D(Collision2D col)
@@ -40,9 +47,11 @@ namespace S_Durlanik.Game
             }
             
             // rotation of bullet after collision
-            var contactPoint = col.GetContact(0);
-            var rotation = Quaternion.FromToRotation(Vector2.right, contactPoint.normal);
-            transform.rotation = rotation;
+            direction = Vector3.Reflect(lastVelocity.normalized, col.contacts[0].normal);
+
+            //rotate bullet to bounce direction
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
             CheckBounces();
         }
