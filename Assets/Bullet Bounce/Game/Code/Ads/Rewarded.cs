@@ -7,23 +7,24 @@ using UnityEngine;
 public class Rewarded : MonoBehaviour
 {
 
-    // These ad units are configured to always serve test ads.
+    // Android Test Ad Unit ID: ca-app-pub-3940256099942544/5224354917
+    // iOS Test Ad Unit ID: ca-app-pub-3940256099942544/1712485313
+    
+    // Android Real Ad Unit ID: ca-app-pub-6243261579893342/2735625035
+    // iOS Real Ad Unit ID: ca-app-pub-6243261579893342/6291726668
 #if UNITY_ANDROID
-    private string _adUnitId = "ca-app-pub-6243261579893342/2735625035";
+    private string _adUnitId = "ca-app-pub-3940256099942544/5224354917";
 #elif UNITY_IPHONE
   private string _adUnitId = "ca-app-pub-6243261579893342/6291726668";
 #else
   private string _adUnitId = "unused";
 #endif
     
-    Action _onRewardedAdLoadedEvent;
-    Action _onRewardedAdReceivedRewardEvent;
+    private Action _onRewardedAdRecievedRewardEvent;
     public void LoadRewardedAd(Action onRewardedAdLoadedEvent = null,Action onRewardedAdReceivedRewardEvent = null)
     {
-        _onRewardedAdLoadedEvent = onRewardedAdLoadedEvent;
-        _onRewardedAdReceivedRewardEvent = onRewardedAdReceivedRewardEvent;
-
-        RequestRewardedAd();
+        _onRewardedAdRecievedRewardEvent = onRewardedAdReceivedRewardEvent;
+        ShowRewardedAd(onRewardedAdReceivedRewardEvent);
     }
     
     private RewardedAd rewardedAd;
@@ -31,7 +32,7 @@ public class Rewarded : MonoBehaviour
     /// <summary>
     /// Loads the rewarded ad.
     /// </summary>
-    void RequestRewardedAd()
+    public void RequestRewardedAd()
     {
         // Clean up the old ad before loading a new one.
         if (rewardedAd != null)
@@ -62,29 +63,36 @@ public class Rewarded : MonoBehaviour
                           + ad.GetResponseInfo());
                 rewardedAd = ad;
                 RegisterEventHandlers(rewardedAd);
-                
-                ShowRewardedAd();
-                
-                _onRewardedAdLoadedEvent?.Invoke();
+
             });
     }
-    void ShowRewardedAd()
+    bool isRewardEarned = false;
+    private void Update()
+    {
+        if (isRewardEarned)
+        {
+            _onRewardedAdRecievedRewardEvent?.Invoke();
+            isRewardEarned = false;
+        }
+    }
+
+    void ShowRewardedAd(Action onRewardedAdReceivedRewardEvent)
     {
         const string rewardMsg =
             "Rewarded ad rewarded the user. Type: {0}, amount: {1}.";
+        
 
         if (rewardedAd != null && rewardedAd.CanShowAd())
         {
             rewardedAd.Show((Reward reward) =>
             {
                 // TODO: Reward the user.
+                isRewardEarned = true;
                 Debug.Log(String.Format(rewardMsg, reward.Type, reward.Amount));
-                
-                _onRewardedAdReceivedRewardEvent?.Invoke();
             });
         }
     }
-    
+
     private void RegisterEventHandlers(RewardedAd ad)
     {
         // Raised when the ad is estimated to have earned money.
@@ -93,6 +101,7 @@ public class Rewarded : MonoBehaviour
             Debug.Log(String.Format("Rewarded ad paid {0} {1}.",
                 adValue.Value,
                 adValue.CurrencyCode));
+            //_onRewardedAdRecievedRewardEvent?.Invoke();
         };
         // Raised when an impression is recorded for an ad.
         ad.OnAdImpressionRecorded += () =>
@@ -113,12 +122,16 @@ public class Rewarded : MonoBehaviour
         ad.OnAdFullScreenContentClosed += () =>
         {
             Debug.Log("Rewarded ad full screen content closed.");
+            
+            RequestRewardedAd();
         };
         // Raised when the ad failed to open full screen content.
         ad.OnAdFullScreenContentFailed += (AdError error) =>
         {
             Debug.LogError("Rewarded ad failed to open full screen content " +
                            "with error : " + error);
+            
+            RequestRewardedAd();
         };
     }
 }

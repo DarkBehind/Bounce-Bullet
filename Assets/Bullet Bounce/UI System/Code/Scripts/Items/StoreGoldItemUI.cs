@@ -66,6 +66,7 @@ namespace S_Durlanik.UI
                 Debug.Log("Reward earned: " + _itemCode);
                 _clicked = false;
             });
+            
         }
     }
 

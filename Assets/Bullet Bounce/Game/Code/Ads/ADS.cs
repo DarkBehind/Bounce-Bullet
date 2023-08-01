@@ -20,6 +20,7 @@ public class ADS : MonoBehaviour
         MobileAds.Initialize((InitializationStatus initStatus) =>
         {
             // This callback is called once the MobileAds SDK is initialized.
+            rewarded.RequestRewardedAd();
         });
     }
 
