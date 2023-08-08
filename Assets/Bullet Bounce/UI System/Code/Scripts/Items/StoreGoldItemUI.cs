@@ -16,7 +16,6 @@ namespace S_Durlanik.UI
         public Image icon;
         public Image bestOfferIcon;
         public GameObject watchAdsButton;
-
         private string _itemCode;
         int _goldAmount;
         public void SetStoreGoldItemUI(GoldOffer offer)
@@ -52,6 +51,15 @@ namespace S_Durlanik.UI
             
             Debug.Log("Offer bought: " + _itemCode);
             // market satin alma ekrani acilacak, basarili olursa satin alindi popupini gosterecegiz
+            IAPManager.Instance.Consumable_Btn_Pressed(_itemCode, () =>
+            {
+                InventoryManager.Instance.AddGold(_goldAmount);
+                InventoryManager.Instance.ShowItemClaimPopup(icon.sprite, _goldAmount);
+            }, () =>
+            {
+                
+            });
+            
         }
         bool _clicked = false;
         public void OnWatchAds()

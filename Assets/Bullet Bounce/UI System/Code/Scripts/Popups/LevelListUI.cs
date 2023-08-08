@@ -30,7 +30,7 @@ public class LevelListUI : PopupScreen
         for (int i = 1; i <= 25; i++) // 25 level oldugunu ifade ediyor
         {
             var newLevelListItemUI = Instantiate(exampleLevelListItemUI, exampleLevelListItemUI.transform.parent);
-            newLevelListItemUI.SetLevelListItemUI(i, i > LevelManager.GetCurrentLevel());
+            newLevelListItemUI.SetLevelListItemUI(i, i > LevelManager.GetLastPlayedLevel());
             newLevelListItemUI.gameObject.SetActive(true);
         }
     }

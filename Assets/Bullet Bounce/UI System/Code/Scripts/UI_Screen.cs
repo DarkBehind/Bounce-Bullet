@@ -73,7 +73,6 @@ namespace S_Durlanik.UI
             {
                 while(aScreen.GetComponent<CanvasGroup>().alpha > alpha)
                 {
-                    print("Current Screen alpha and name: "+aScreen.name +" " + aScreen.GetComponent<CanvasGroup>().alpha);
                     yield return new WaitForSeconds(.05f);
                 }
             }
@@ -81,7 +80,6 @@ namespace S_Durlanik.UI
             {
                 while(aScreen.GetComponent<CanvasGroup>().alpha < alpha)
                 {
-                    print("Current Screen alpha and name: "+aScreen.name +" " + aScreen.GetComponent<CanvasGroup>().alpha);
                     yield return new WaitForSeconds(.05f);
                 }
             }

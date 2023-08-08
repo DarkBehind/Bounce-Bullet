@@ -42,6 +42,7 @@ namespace S_Durlanik.UI
         {
             if(clicked) return;
             clicked = true;
+            ADS.Instance.interstitialAds.ShowAd();
             ClaimRewardAndNextLevel(rewardItem);
         }
 

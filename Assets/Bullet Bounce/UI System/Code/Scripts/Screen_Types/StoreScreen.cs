@@ -58,11 +58,7 @@ namespace S_Durlanik.UI
             }
         
         }
-
-        public void OnRemoveAds()
-        {
-            ADS.Instance.RemoveAds();
-        }
+        
     }
 
     [Serializable]

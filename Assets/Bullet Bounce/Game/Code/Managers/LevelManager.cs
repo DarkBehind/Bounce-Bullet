@@ -43,7 +43,7 @@ namespace S_Durlanik.Game
             {
                 OnLevelCompleted?.Invoke();
                 Debug.Log("Level Completed!");
-                SetCurrentLevel(GetCurrentLevel() + 1);
+                SetLastPlayedLevel(GetLastPlayedLevel() + 1);
             }
         }
 
@@ -85,11 +85,18 @@ namespace S_Durlanik.Game
         }
 
 
-        public static int GetCurrentLevel()
+        public static int GetLastPlayedLevel()
         {
             return PlayerPrefs.GetInt(Extensions.Prefs.Level, 1);
         }
-        public void SetCurrentLevel(int levelNumber)
+        public int GetCurrentLevel()
+        {
+            if (_currentLevelObject)
+                return _currentLevelObject.levelNumber;
+            else
+                return GetLastPlayedLevel();
+        }   
+        public void SetLastPlayedLevel(int levelNumber)
         {
             PlayerPrefs.SetInt(Extensions.Prefs.Level, levelNumber);
         }
@@ -130,7 +137,7 @@ namespace S_Durlanik.Game
         
         public void LoadNextLevel()
         {
-            LoadLevel(GetCurrentLevel());
+            LoadLevel(GetLastPlayedLevel());
         }
         private void SetLevelProperties(Level level)
         {

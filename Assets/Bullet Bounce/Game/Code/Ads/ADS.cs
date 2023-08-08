@@ -9,7 +9,7 @@ public class ADS : MonoBehaviour
     public InterstitialAds interstitialAds;
     public static ADS Instance;
     
-    
+    public bool isRemoveAds = false;
     private void Awake()
     {
         Instance = this;
@@ -21,11 +21,7 @@ public class ADS : MonoBehaviour
         {
             // This callback is called once the MobileAds SDK is initialized.
             rewarded.RequestRewardedAd();
+            interstitialAds.LoadInterstitialAd();
         });
-    }
-
-    public void RemoveAds()
-    {
-        Debug.Log("RemoveAds");
     }
 }

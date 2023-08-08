@@ -80,6 +80,7 @@ namespace S_Durlanik.UI
         {
             if (_clicked) return;
             _clicked = true;
+            ADS.Instance.interstitialAds.ShowAd();
             LevelManager.Instance.RestartLevel();
             CloseScreen(() =>
             {
@@ -94,6 +95,7 @@ namespace S_Durlanik.UI
             if(_clicked) return;
             _clicked = true;
             LevelManager.Instance.ReturnToMenu();
+            ADS.Instance.interstitialAds.ShowAd();
             CloseScreen(()=>
             {
                 _clicked = false;
