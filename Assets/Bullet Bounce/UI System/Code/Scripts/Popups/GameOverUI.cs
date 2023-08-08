@@ -95,7 +95,6 @@ namespace S_Durlanik.UI
             if(_clicked) return;
             _clicked = true;
             LevelManager.Instance.ReturnToMenu();
-            ADS.Instance.interstitialAds.ShowAd();
             CloseScreen(()=>
             {
                 _clicked = false;

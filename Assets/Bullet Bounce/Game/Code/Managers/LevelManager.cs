@@ -15,6 +15,7 @@ namespace S_Durlanik.Game
 
         public PlayTopBar playTopBar;
         public UI_Screen playScreen;
+        public UI_Screen pauseScreen;
 
         public Transform levelsParent;
         [HideInInspector] public int maxShotCount;
@@ -53,7 +54,6 @@ namespace S_Durlanik.Game
             {
                 return;
             }
-
             maxShotCount--;
             playTopBar.UpdateBulletCountText();
         }
@@ -134,7 +134,12 @@ namespace S_Durlanik.Game
             playScreen.HandleAnimator("hide");
 
         }
-        
+
+        public void PauseMenu()
+        {
+            if (FindObjectOfType<Bullet>() == null)
+                UI_System.Instance.SwitchScreens(pauseScreen);
+        }
         public void LoadNextLevel()
         {
             LoadLevel(GetLastPlayedLevel());

@@ -14447,13 +14447,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 797773345}
     m_Modifications:
     - target: {fileID: 2190329774030321587, guid: 732cea236a696485a80ae3ce15e08b5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190329774030321587, guid: 732cea236a696485a80ae3ce15e08b5c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1621925479}
+      objectReference: {fileID: 1510975400}
+    - target: {fileID: 2190329774030321587, guid: 732cea236a696485a80ae3ce15e08b5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190329774030321587, guid: 732cea236a696485a80ae3ce15e08b5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: S_Durlanik.Game.LevelManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2190329774030321587, guid: 732cea236a696485a80ae3ce15e08b5c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 2530574701794018925}
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190329774030321587, guid: 732cea236a696485a80ae3ce15e08b5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2190329774030321598, guid: 732cea236a696485a80ae3ce15e08b5c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -17540,6 +17556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playTopBar: {fileID: 797773346}
   playScreen: {fileID: 654508017}
+  pauseScreen: {fileID: 2530574701794018925}
   levelsParent: {fileID: 1494000232}
   maxShotCount: 0
   enemyCount: 0
