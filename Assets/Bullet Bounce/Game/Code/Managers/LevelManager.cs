@@ -78,6 +78,16 @@ namespace S_Durlanik.Game
                     return;
                 }
 
+                Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
+                foreach (Obstacle obstacle in obstacles)
+                {
+                    if (obstacle.GetComponent<Rigidbody2D>().velocity.magnitude > .1f)
+                    {
+                        return;
+                    }
+                }
+                
+                
                 OnLevelFailed?.Invoke();
                 Debug.Log("Level Failed!");
                 _isGameRunning = false;
