@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="" />
+    <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/IAPManager/IAPManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/IAPManager/IAPManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +99,7 @@
       <workItem from="1691512755215" duration="616000" />
       <workItem from="1691513594619" duration="404000" />
       <workItem from="1691514016237" duration="12337000" />
+      <workItem from="1691595677604" duration="645000" />
     </task>
     <servers />
   </component>

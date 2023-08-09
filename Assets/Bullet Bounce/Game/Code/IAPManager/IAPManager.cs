@@ -63,8 +63,14 @@ public class IAPManager : MonoBehaviour, IStoreListener
     }
     
     public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs purchaseEvent)
-    { 
+    {
         _onPurchaseComplete?.Invoke();
+        if(purchaseEvent.purchasedProduct.definition.id == nonConsumableItems[0].Id)
+        {
+            ADS.Instance.isRemoveAds = true;
+            Debug.Log("Remove ADS purchased");
+        }
+        
         return PurchaseProcessingResult.Complete;
     }
 
