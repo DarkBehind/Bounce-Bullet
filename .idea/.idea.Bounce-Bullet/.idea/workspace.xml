@@ -3,8 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/InterstitialAds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/InterstitialAds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Enemy/Skeleton/idle/skeleton_idle_0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer Tileset/Sprites/Enemy/Skeleton/idle/skeleton_idle_0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/IAPManager/IAPManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/IAPManager/IAPManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Obstacle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Obstacle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Circle_Obstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Circle_Obstacle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Environment/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyFreeCoinUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyFreeCoinUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +113,10 @@
       <workItem from="1691513594619" duration="404000" />
       <workItem from="1691514016237" duration="12337000" />
       <workItem from="1691595677604" duration="645000" />
-      <workItem from="1691622780362" duration="824000" />
+      <workItem from="1691622780362" duration="1166000" />
+      <workItem from="1691709174421" duration="425000" />
+      <workItem from="1692030661553" duration="2913000" />
+      <workItem from="1692046643857" duration="5104000" />
     </task>
     <servers />
   </component>

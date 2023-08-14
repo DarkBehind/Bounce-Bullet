@@ -20,6 +20,9 @@ namespace S_Durlanik.Game
         public Transform levelsParent;
         [HideInInspector] public int maxShotCount;
         [HideInInspector] public int enemyCount;
+        
+        
+        [SerializeField] private GameOverUI gameOverUI;
 
         private bool _isGameRunning;
         Level _currentLevelObject;
@@ -94,6 +97,15 @@ namespace S_Durlanik.Game
             }
         }
 
+        public void SetLevelFailed()
+        {
+            if (!_isGameRunning) return;
+            OnLevelFailed?.Invoke();
+            gameOverUI.OnNoThanksButton();
+            Debug.Log("Level Failed!");
+            _isGameRunning = false;
+        }
+
 
         public static int GetLastPlayedLevel()
         {
@@ -152,7 +164,14 @@ namespace S_Durlanik.Game
         }
         public void LoadNextLevel()
         {
-            LoadLevel(GetLastPlayedLevel());
+            if (_currentLevelObject && _currentLevelObject.levelNumber < 25)
+            {
+                LoadLevel(_currentLevelObject.levelNumber + 1);
+            }
+            else
+            {
+                ReturnToMenu();
+            }
         }
         private void SetLevelProperties(Level level)
         {

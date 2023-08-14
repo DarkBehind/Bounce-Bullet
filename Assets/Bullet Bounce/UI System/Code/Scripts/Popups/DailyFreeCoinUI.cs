@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using S_Durlanik.Game;
 using S_Durlanik.UI;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,8 @@ public class DailyFreeCoinUI : PopupScreen
     [SerializeField]private GameObject notificationGameObject;
     [SerializeField]private Button claimButton;
     [SerializeField] private RewardItem _currentReward;
-    
+    [SerializeField] private TextMeshProUGUI rewardText;
+    [SerializeField] private int[] _maxAndMinRewardAmount;
     public override void StartScreen(Action onStarted = null)
     {
         base.StartScreen(onStarted);
@@ -26,6 +28,14 @@ public class DailyFreeCoinUI : PopupScreen
     {
         notificationGameObject.SetActive(status);
         claimButton.interactable = status;
+        if (!status)
+        {
+            rewardText.text = "Claimed";
+            rewardText.color = Color.gray;
+        }
+        else
+            rewardText.text = _currentReward.stackAmount.ToString();
+        
     }
     public void CheckDailyFreeCoin()
     {
@@ -35,6 +45,7 @@ public class DailyFreeCoinUI : PopupScreen
             string currentDay = Extensions.GetCurrentDayByDate();
             if (!string.Equals(lastClaimedDay, currentDay))
             {
+                _currentReward.stackAmount = UnityEngine.Random.Range(_maxAndMinRewardAmount[0], _maxAndMinRewardAmount[1]);
                 ChangeNotificationStatus(true);
             }
             else

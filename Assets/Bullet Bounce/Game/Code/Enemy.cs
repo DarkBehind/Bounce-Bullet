@@ -8,6 +8,28 @@ public class Enemy : MonoBehaviour
 {
     public static event Action<Enemy> OnEnemyDestroyed;
     private bool _isDead;
+    public List<Rigidbody2D> bones;
+    CapsuleCollider2D _collider;
+    Rigidbody2D _rigidbody;
+
+    private void Start()
+    {
+        _collider = GetComponent<CapsuleCollider2D>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    void RagDoll(Rigidbody2D hittedRb)
+    {
+        _collider.enabled = false;
+        _rigidbody.isKinematic = true;
+        Debug.Log("Hitted RB: " + hittedRb.name + " Velocity: " + hittedRb.velocity);
+        foreach (var bone in bones)
+        {
+            bone.GetComponent<CapsuleCollider2D>().isTrigger = false;
+            bone.isKinematic = false;
+            bone.AddForce( hittedRb.velocity * .1f, ForceMode2D.Impulse);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -15,22 +37,22 @@ public class Enemy : MonoBehaviour
 
         if (col.GetComponent<Bullet>())
         {
-            DestroyEnemy();
+            DestroyEnemy(0,col.GetComponent<Rigidbody2D>());
             _isDead = true;
         }
         else if (col.CompareTag(Extensions.Tags.Platform))
         {
-            DestroyEnemy();
+            DestroyEnemy(0,col.GetComponent<Rigidbody2D>());
             _isDead = true;
         }
         else if (col.GetComponent<Obstacle>())
         {
             var obstacle = col.GetComponent<Obstacle>();
             
-            DestroyEnemy();
+            DestroyEnemy(0,col.GetComponent<Rigidbody2D>());
             _isDead = true;
-
             
+
             // switch (obstacle.obstacleType)
             // {
             //     case Obstacle.ObstacleType.Box:
@@ -45,11 +67,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void DestroyEnemy(float delay = 0)
+    public void DestroyEnemy(float delay = 0f, Rigidbody2D hittedRb = null)
     {
         OnEnemyDestroyed?.Invoke(this);
         
         print($"Enemy Destroyed: {gameObject.name}");
-        Destroy(gameObject,delay);
+        RagDoll(hittedRb);
+        //Destroy(gameObject,delay);
     }
 }

@@ -34,7 +34,7 @@ namespace S_Durlanik.Game
 
             foreach (Collider2D enemy in enemies)
             {
-                enemy.GetComponent<Enemy>().DestroyEnemy(0f);
+                enemy.GetComponent<Enemy>().DestroyEnemy(0,GetComponent<Rigidbody2D>());
             }
             
             var obstacles = Physics2D.OverlapCircleAll(transform.position, tntRadius, obstacleLayer);
@@ -59,6 +59,14 @@ namespace S_Durlanik.Game
 
             OnTntExplode?.Invoke();
             DestroyObstacle();
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                LevelManager.Instance.SetLevelFailed();
+            }
         }
 
         private void OnDrawGizmosSelected()
