@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
     public List<Rigidbody2D> bones;
     CapsuleCollider2D _collider;
     Rigidbody2D _rigidbody;
-
     private void Start()
     {
         _collider = GetComponent<CapsuleCollider2D>();
@@ -22,7 +21,6 @@ public class Enemy : MonoBehaviour
     {
         _collider.enabled = false;
         _rigidbody.isKinematic = true;
-        Debug.Log("Hitted RB: " + hittedRb.name + " Velocity: " + hittedRb.velocity);
         foreach (var bone in bones)
         {
             bone.GetComponent<CapsuleCollider2D>().isTrigger = false;
@@ -34,7 +32,6 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (_isDead) return;
-
         if (col.GetComponent<Bullet>())
         {
             DestroyEnemy(0,col.GetComponent<Rigidbody2D>());
@@ -45,7 +42,7 @@ public class Enemy : MonoBehaviour
             DestroyEnemy(0,col.GetComponent<Rigidbody2D>());
             _isDead = true;
         }
-        else if (col.GetComponent<Obstacle>())
+        else if (col.GetComponent<Obstacle>() && col.GetComponent<Rigidbody2D>().velocity.magnitude > 1f)
         {
             var obstacle = col.GetComponent<Obstacle>();
             

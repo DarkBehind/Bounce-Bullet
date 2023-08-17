@@ -9,7 +9,7 @@ namespace S_Durlanik.UI
     public class PauseUI : PopupScreen
     {
         public GameObject settingsUI;
-        
+
         public void OnSettings()
         {
             settingsUI.SetActive(true);

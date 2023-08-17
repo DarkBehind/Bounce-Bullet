@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using S_Durlanik.Game;
+using S_Durlanik.Sound;
 using UnityEngine;
 using UnityEngine.Purchasing;
 public class IAPManager : MonoBehaviour, IStoreListener
@@ -20,8 +21,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
     public List<NonConsumableItem> nonConsumableItems;
     public List<SubscriptionItem> subscriptionItems;
     
-    
-     IStoreController _storeController;
+    IStoreController _storeController;
     private void Start()
     {
         SetupBuilder();

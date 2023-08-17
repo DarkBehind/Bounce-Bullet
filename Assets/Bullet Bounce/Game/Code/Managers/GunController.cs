@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using S_Durlanik.UI;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace S_Durlanik.Game
 {
@@ -37,7 +37,7 @@ namespace S_Durlanik.Game
             // if touch on ui element then return
            
 
-            if (Input.GetMouseButton(0) && !IsPointerOverUIObject())
+            if (Input.GetMouseButton(0) && !UI_System.IsPointerOverUIObject())
             {
                 if (LevelManager.Instance.maxShotCount <= 0)
                 {
@@ -50,7 +50,7 @@ namespace S_Durlanik.Game
                 ShowAimLine();
             }
 
-            if (Input.GetMouseButtonUp(0) && !IsPointerOverUIObject())
+            if (Input.GetMouseButtonUp(0) && !UI_System.IsPointerOverUIObject())
             {
                 if (LevelManager.Instance.maxShotCount <= 0)
                 {
@@ -102,13 +102,6 @@ namespace S_Durlanik.Game
             _lineObject.SetActive(false);
         }
 
-        private bool IsPointerOverUIObject()
-        {
-            PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-            eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x,Input.mousePosition.y);
-            List<RaycastResult> results = new List<RaycastResult>();
-            EventSystem.current.RaycastAll(eventDataCurrentPosition,results);
-            return results.Count > 0;
-        }
+        
     }
 }

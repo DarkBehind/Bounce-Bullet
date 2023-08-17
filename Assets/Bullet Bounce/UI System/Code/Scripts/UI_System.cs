@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using S_Durlanik.Sound;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 
 namespace S_Durlanik.UI
@@ -96,7 +98,6 @@ namespace S_Durlanik.UI
                 _currentScreen = aScreen;
                 _currentScreen.gameObject.SetActive(true);
                 _currentScreen.StartScreen();
-
                 Debug.Log("Current Screen: " + _currentScreen.name);
                 OnSwitchedScreen?.Invoke();
                 StartCoroutine(WaitToSwitchScreens(_currentScreen));
@@ -168,6 +169,17 @@ namespace S_Durlanik.UI
                 screen.gameObject.SetActive(true);
             }
         }
+        
+        public static bool IsPointerOverUIObject()
+        {
+            PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+            eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x,Input.mousePosition.y);
+            List<RaycastResult> results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(eventDataCurrentPosition,results);
+
+            return results.Count > 0;
+        }
+        
         #endregion
     }
 }
