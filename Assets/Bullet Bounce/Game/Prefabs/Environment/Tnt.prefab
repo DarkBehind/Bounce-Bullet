@@ -144,6 +144,7 @@ MonoBehaviour:
     m_Bits: 0
   tntRadius: 13.22
   tntForce: 2
+  tntExplosionEffect: {fileID: 100006, guid: 8a4aceaf2957c044480166b429f4c7d0, type: 3}
 --- !u!50 &8818023975274607867
 Rigidbody2D:
   serializedVersion: 4
