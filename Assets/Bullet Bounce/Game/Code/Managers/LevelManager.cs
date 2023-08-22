@@ -47,7 +47,8 @@ namespace S_Durlanik.Game
             {
                 OnLevelCompleted?.Invoke();
                 Debug.Log("Level Completed!");
-                SetLastPlayedLevel(GetLastPlayedLevel() + 1);
+                if(_currentLevelObject.levelNumber >= GetLastPlayedLevel())
+                    SetLastPlayedLevel(GetLastPlayedLevel() + 1);
             }
         }
 
