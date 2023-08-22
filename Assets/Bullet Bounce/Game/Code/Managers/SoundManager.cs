@@ -55,6 +55,12 @@ namespace S_Durlanik.Sound
 
     public enum SFX
     {
-        Button_Sound_01
+        Button_Sound_01,
+        Arrow_Sound_01,
+        Hurt_Sound_01,
+        Hurt_Sound_02,
+        Hurt_Sound_03,
+        Hurt_Sound_04,
+        Hurt_Sound_05,
     }
 }

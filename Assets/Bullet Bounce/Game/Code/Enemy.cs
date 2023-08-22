@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using S_Durlanik.Game;
+using S_Durlanik.Sound;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -32,14 +33,22 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (_isDead) return;
+        int random = UnityEngine.Random.Range(1, 6);
+        string soundName = $"Hurt_Sound_0{random}";
+        SFX sfx = (SFX) Enum.Parse(typeof(SFX), soundName);
+        Debug.Log(sfx);
         if (col.GetComponent<Bullet>())
         {
             DestroyEnemy(0,col.GetComponent<Rigidbody2D>());
+            
+            SoundManager.Instance.PlaySFXOneTime(sfx);
+            
             _isDead = true;
         }
         else if (col.CompareTag(Extensions.Tags.Platform))
         {
             DestroyEnemy(0,col.GetComponent<Rigidbody2D>());
+            SoundManager.Instance.PlaySFXOneTime(sfx);
             _isDead = true;
         }
         else if (col.GetComponent<Obstacle>() && col.GetComponent<Rigidbody2D>().velocity.magnitude > 1f)
@@ -47,6 +56,7 @@ public class Enemy : MonoBehaviour
             var obstacle = col.GetComponent<Obstacle>();
             
             DestroyEnemy(0,col.GetComponent<Rigidbody2D>());
+            SoundManager.Instance.PlaySFXOneTime(sfx);
             _isDead = true;
             
 

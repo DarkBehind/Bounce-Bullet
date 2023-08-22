@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SceneManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyLoginUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/DailyLoginUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SoundManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,7 @@
       <workItem from="1692497251075" duration="8564000" />
       <workItem from="1692555853696" duration="1615000" />
       <workItem from="1692643310483" duration="154000" />
-      <workItem from="1692657137669" duration="6131000" />
+      <workItem from="1692657137669" duration="7699000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using S_Durlanik.Sound;
 using S_Durlanik.UI;
 using UnityEngine;
 
@@ -66,6 +67,7 @@ namespace S_Durlanik.Game
         {
             gunAnimator.SetTrigger("Shoot");
             Bullet bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation,transform.parent.parent);
+            bullet.gameObject.SetActive(false);
             bullet.maxBounces = Mathf.RoundToInt(maxBounces);
             Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
             bulletRigidbody.AddForce(transform.right * bullet.speed, ForceMode2D.Impulse);
@@ -76,6 +78,7 @@ namespace S_Durlanik.Game
         {
             yield return new WaitForSeconds(bulletDelay);
             bullet.gameObject.SetActive(true);
+            SoundManager.Instance.PlaySFXOneTime(SFX.Arrow_Sound_01);
             OnBulletFired?.Invoke();
             Debug.Log("Bullet fired");
         }
