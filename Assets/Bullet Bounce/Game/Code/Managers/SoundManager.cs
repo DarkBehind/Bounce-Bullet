@@ -43,6 +43,15 @@ namespace S_Durlanik.Sound
                 sfxSource.PlayOneShot(clip);
         }
 
+        public void PlaySFX(SFX sfx,bool onLoop = false,float delay = 0f)
+        {
+            AudioClip clip = _sfxSources.Find(x => x.name == sfx.ToString());
+            if(clip)
+                sfxSource.clip = clip;
+            sfxSource.PlayDelayed(delay);
+            sfxSource.loop = onLoop;
+        }
+
         #region Button Sound
 
         public void PlayButtonSound()
@@ -62,5 +71,8 @@ namespace S_Durlanik.Sound
         Hurt_Sound_03,
         Hurt_Sound_04,
         Hurt_Sound_05,
+        SFX_SpinWheel_Start_Sound_1,
+        SpinWheel_Fast_Loop_Sound_1,
+        SpinWheel_Slow_Loop_Sound_1
     }
 }

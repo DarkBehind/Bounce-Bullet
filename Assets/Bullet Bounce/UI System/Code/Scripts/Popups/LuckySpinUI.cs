@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using S_Durlanik.Game;
+using S_Durlanik.Sound;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -84,10 +85,13 @@ namespace S_Durlanik.UI
         
             float spinSpeed = totalSpinAngle / timeToStop;
             print("SpinSpeed: " + spinSpeed);
+            // Play sound by speed of spin
+            
+            SoundManager.Instance.PlaySFX(SFX.SpinWheel_Fast_Loop_Sound_1,true);
 
         
             float spinTime = 0f;
-
+            bool slowedDown = false;
             while (spinTime < timeToStop)
             {
                 float currentAngle = firstSpinAngle + (spinTime / timeToStop) * secondSpinAngle;
@@ -97,6 +101,11 @@ namespace S_Durlanik.UI
                 if (spinTime > timeToStop / 3f)
                 {
                     newRotationSpeed *= 2/3f;
+                    if (!slowedDown)
+                    {
+                        SoundManager.Instance.PlaySFX(SFX.SpinWheel_Slow_Loop_Sound_1,true,0.1f);
+                        slowedDown = true;
+                    }
                 }
 
                 if (spinTime > timeToStop / 3f *2f)
@@ -133,10 +142,11 @@ namespace S_Durlanik.UI
                 _ => 0
             };
             // _selectedSegmentNumber = (int)Mathf.Round((wheel.eulerAngles.z / _anglePerSegment));
-
+        
             // Sonucu yazdır
             resultText.text = "Selected Segment: " + (_selectedSegmentNumber);
-
+            
+            SoundManager.Instance.PlaySFX(SFX.SFX_SpinWheel_Start_Sound_1);
             // Ödülü ver
             InventoryManager.Instance.PurchaseItem(rewardItems[_selectedSegmentNumber - 1],true);
             InventoryManager.Instance.ShowItemClaimPopup(rewardItems[_selectedSegmentNumber - 1].itemSprite, rewardItems[_selectedSegmentNumber - 1].stackAmount);
