@@ -111,30 +111,26 @@ namespace S_Durlanik.Game
         
         public void CheckDailyReward()
         {
-
-            if (PlayerPrefs.HasKey(Extensions.Prefs.LastClaimedDailyReward))
+            if (PlayerPrefs.HasKey(Extensions.Prefs.TotalClaimedReward))
             {
-                if (PlayerPrefs.GetInt(Extensions.Prefs.TotalClaimedDailyReward) >= 5)
+                if(Extensions.GET_SET_CurrentDay(false) >= 5 && !string.Equals(Extensions.GetCurrentDayByDate(),Extensions.GET_SET_CurrentRewardDayByDateTime(false)))
+                    Extensions.SetDefaultDailyRewardConfigs();
+
+
+                
+                if (!string.Equals(Extensions.GetCurrentDayByDate(), 
+                        Extensions.GET_SET_CurrentRewardDayByDateTime(false)))
                 {
-                    PlayerPrefs.SetInt(Extensions.Prefs.TotalClaimedDailyReward, 0);
+                    Extensions.GET_SET_CurrentDay(true, Extensions.GET_SET_CurrentDay(false) + 1);
+                    Extensions.GET_SET_CurrentRewardTaken(true, 0);
+                    Extensions.GET_SET_CurrentRewardDayByDateTime(true, Extensions.GetCurrentDayByDate());
                 }
-
-                string lastClaimedDay = PlayerPrefs.GetString(Extensions.Prefs.LastClaimedDailyReward);
-
-                string currentDay = Extensions.GetCurrentDayByDate();
-
-                if (!string.Equals(lastClaimedDay,currentDay))
-                {
-                    Extensions.IncreaseCurrentDay();
+                
+                if(Extensions.GET_SET_CurrentRewardTaken(false) == 0)
                     UI_System.Instance.SwitchScreens(dailyLoginScreen);
-                }
-            }
-            else
-            {
-                PlayerPrefs.SetInt(Extensions.Prefs.TotalClaimedDailyReward, 0);
-                PlayerPrefs.SetInt(Extensions.Prefs.CurrentDay, 1);
+                
+            }else
                 UI_System.Instance.SwitchScreens(dailyLoginScreen);
-            }
         }
     }
     
@@ -153,11 +149,13 @@ namespace S_Durlanik.Game
         public static class Prefs
         {
             public const string AdsRemoved = "AdsRemoved";
-            public const string CurrentDay = "CurrentDay";
-            public const string LastClaimedDailyReward = "LastClaimedDay";
-            public const string TotalClaimedDailyReward = "TotalClaimedDays";
             public const string Level = "Level";
-            public static string CurrentDayRewardTaken => GetCurrentDay() + "_RewardTaken";
+            // Daily Reward
+            public const string TotalClaimedReward = "TotalClaimedReward";
+            public const string CurrentDay = "CurrentDay";
+            public const string CurrentDayByDate = "CurrentDayByDate";
+            public const string LastClaimedDayByDate = "LastClaimedDayByDate";
+            public const string CurrentRewardTaken = "CurrentRewardTaken";
             
             // Free Coin
             public const string FreeCoinLastClaimedDay = "FreeCoinLastClaimedDay";
@@ -174,40 +172,92 @@ namespace S_Durlanik.Game
         {
             return PlayerPrefs.HasKey(Prefs.AdsRemoved);
         }
-        
-        public static int GetCurrentDay()
+
+        public static void SetDefaultDailyRewardConfigs()
         {
+            GET_SET_TotalClaimedReward(true);
+            GET_SET_CurrentDay(true);
+            GET_SET_LastClaimedDayByDate(true);
+            GET_SET_CurrentRewardDayByDateTime(true, GetCurrentDayByDate());
+            GET_SET_CurrentRewardTaken(true);
+            PlayerPrefs.Save();
+        }
+        public static int GET_SET_TotalClaimedReward(bool set, int value = 0)
+        {
+            Debug.Log("TotalClaimedReward : " + PlayerPrefs.GetInt(Prefs.TotalClaimedReward,0) + "");
+            if (set)
+            {
+                PlayerPrefs.SetInt(Prefs.TotalClaimedReward, value);
+                return -1;
+            }
+            return PlayerPrefs.GetInt(Prefs.TotalClaimedReward,0);
+        }
+
+        public static int GET_SET_CurrentDay(bool set, int value = 1)
+        {
+            Debug.Log("CurrentDay : " + PlayerPrefs.GetInt(Prefs.CurrentDay,1) + "");
+            if (set)
+            {
+                PlayerPrefs.SetInt(Prefs.CurrentDay, value);
+                return -1;
+            }
             return PlayerPrefs.GetInt(Prefs.CurrentDay,1);
+        }
+        public static string GET_SET_CurrentRewardDayByDateTime(bool set, string value = "")
+        {
+            Debug.Log("CurrentDayByDate : " + PlayerPrefs.GetString(Prefs.CurrentDayByDate,"") + "");
+            if (set)
+            {
+                PlayerPrefs.SetString(Prefs.CurrentDayByDate, value);
+                return "";
+            }
+            
+            return PlayerPrefs.GetString(Prefs.CurrentDayByDate,"");
+        }
+
+        public static string GET_SET_LastClaimedDayByDate(bool set, string value = "")
+        {
+            Debug.Log("LastClaimedDayByDate : " + PlayerPrefs.GetString(Prefs.LastClaimedDayByDate,"") + "");
+            if (set)
+            {
+                PlayerPrefs.SetString(Prefs.LastClaimedDayByDate, value);
+                return "";
+            }
+            
+            return PlayerPrefs.GetString(Prefs.LastClaimedDayByDate,"");
+        }
+        public static bool IsGetRewardAvailableToday()
+        {
+            Debug.Log("IsGetRewardAvailableToday : " + !string.Equals(GET_SET_CurrentRewardDayByDateTime(false), GET_SET_LastClaimedDayByDate(false)) + "");
+            return !string.Equals(GET_SET_CurrentRewardDayByDateTime(false), GET_SET_LastClaimedDayByDate(false));
+        }
+        public static int GET_SET_CurrentRewardTaken(bool set, int value = 0)
+        {
+            Debug.Log("CurrentRewardTaken : " + PlayerPrefs.GetInt(Prefs.CurrentRewardTaken,0) + "");
+            if (set)
+            {
+                PlayerPrefs.SetInt(Prefs.CurrentRewardTaken, value);
+                return -1;
+            }
+            return PlayerPrefs.GetInt(Prefs.CurrentRewardTaken,0);
+        }
+
+        public static void SetCurrentDayRewardTaken()
+        {
+            GET_SET_TotalClaimedReward(true, GET_SET_TotalClaimedReward(false) + 1);
+            GET_SET_LastClaimedDayByDate(true, GetCurrentDayByDate());
+            GET_SET_CurrentRewardDayByDateTime(true, GetCurrentDayByDate());
+            GET_SET_CurrentRewardTaken(true, 1);
+            PlayerPrefs.Save();
         }
 
         public static string GetCurrentDayByDate()
         {
+            //Debug.Log("GetCurrentDayByDate : " + DateTime.Now.ToShortDateString() + "");
+            //return DateTime.Now.AddDays(0).ToShortDateString();
             return DateTime.Now.ToShortDateString();
         }
-        
-        public static void IncreaseCurrentDay()
-        {
-            Debug.Log("Increasing current day is "+ GetCurrentDay());
-            PlayerPrefs.SetInt(Prefs.CurrentDay, GetCurrentDay() + 1);
-            PlayerPrefs.Save();
-        }
-        
-        public static int HasCurrentDayRewardTaken()
-        {
-            return PlayerPrefs.GetInt(Prefs.CurrentDayRewardTaken, 0);
-        }
-        
-        public static void SetCurrentDayRewardTaken()
-        {
-            PlayerPrefs.SetInt(Prefs.CurrentDayRewardTaken, 1);
-            var totalClaimedDays = PlayerPrefs.GetInt(Prefs.TotalClaimedDailyReward);
-            PlayerPrefs.SetInt(Prefs.TotalClaimedDailyReward, totalClaimedDays + 1);
-        
-            Debug.Log("Total claimed days: " + PlayerPrefs.GetInt(Prefs.TotalClaimedDailyReward));
-            PlayerPrefs.SetString(Prefs.LastClaimedDailyReward, GetCurrentDayByDate());
-            PlayerPrefs.Save();
-        }
-        
+
         public static void SetFreeCoinLastClaimedDay()
         {
             PlayerPrefs.SetString(Prefs.FreeCoinLastClaimedDay, GetCurrentDayByDate());

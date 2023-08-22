@@ -65,21 +65,17 @@ namespace S_Durlanik.UI
                 
                 newDailyLoginItemUI.gameObject.SetActive(true);
                 
-                reward.isCurrentReward = reward.day == Extensions.GetCurrentDay();
-
-                if (reward.day < Extensions.GetCurrentDay())
-                {
+                
+                reward.isCurrentReward = reward.day == Extensions.GET_SET_CurrentDay(false);
+                
+                if(reward.day < Extensions.GET_SET_CurrentDay(false))
                     reward.hasRewardClaimed = true;
-                }
-                else if (reward.day == Extensions.GetCurrentDay())
+                else if (reward.day == Extensions.GET_SET_CurrentDay(false))
                 {
-                    reward.hasRewardClaimed = Extensions.HasCurrentDayRewardTaken() == 1;
+                    reward.hasRewardClaimed = Extensions.GET_SET_CurrentRewardTaken(false) == 1;
                 }
                 else
-                {
                     reward.hasRewardClaimed = false;
-                }
-                
                 if (reward.isCurrentReward)
                 {
                     _currentReward = reward;
@@ -112,6 +108,12 @@ namespace S_Durlanik.UI
         public void Claim2XReward()
         {
             // reklam goster => basarili ise odul popupi ac
+            ADS.Instance.rewarded.LoadRewardedAd(null, () =>
+            {
+                InventoryManager.Instance.ShowItemClaimPopup(_currentReward.itemIcon, _currentReward.amount * 2);
+                InventoryManager.Instance.AddGold(_currentReward.amount * 2);
+                Extensions.SetCurrentDayRewardTaken();
+            });
         }
     }
     
