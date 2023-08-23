@@ -13,9 +13,11 @@ public class Rewarded : MonoBehaviour
     // Android Real Ad Unit ID: ca-app-pub-6243261579893342/2735625035
     // iOS Real Ad Unit ID: ca-app-pub-6243261579893342/6291726668
 #if UNITY_ANDROID
-    private string _adUnitId = "ca-app-pub-3940256099942544/5224354917";
+    private string _adUnitId = "unit id: ca-app-pub-6243261579893342/2735625035";
+    private string _adUnitTestId = "ca-app-pub-3940256099942544/5224354917";
 #elif UNITY_IPHONE
-  private string _adUnitId = "ca-app-pub-6243261579893342/6291726668";
+    private string _adUnitId = "ca-app-pub-6243261579893342/6291726668";
+    private string _adUnitTestId = "ca-app-pub-3940256099942544/1712485313";
 #else
   private string _adUnitId = "unused";
 #endif
@@ -26,9 +28,16 @@ public class Rewarded : MonoBehaviour
         _onRewardedAdRecievedRewardEvent = onRewardedAdReceivedRewardEvent;
         ShowRewardedAd(onRewardedAdReceivedRewardEvent);
     }
-    
     private RewardedAd rewardedAd;
-
+    
+    private string AdUnitID()
+    {
+        if (ADS.Instance.test)
+            return _adUnitTestId;
+        
+        return _adUnitId;
+    }
+    
     /// <summary>
     /// Loads the rewarded ad.
     /// </summary>
@@ -48,7 +57,7 @@ public class Rewarded : MonoBehaviour
         adRequest.Keywords.Add("unity-admob-sample");
 
         // send the request to load the ad.
-        RewardedAd.Load(_adUnitId, adRequest,
+        RewardedAd.Load(AdUnitID(), adRequest,
             (RewardedAd ad, LoadAdError error) =>
             {
                 // if error is not null, the load request failed.

@@ -5,6 +5,7 @@ using GoogleMobileAds.Api;
 using UnityEngine;
 public class ADS : MonoBehaviour
 {
+    public bool test;
     public Rewarded rewarded;
     public InterstitialAds interstitialAds;
     public static ADS Instance;

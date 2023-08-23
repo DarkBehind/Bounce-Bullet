@@ -15,12 +15,9 @@ namespace S_Durlanik
         [SerializeField] private List<Sprite> musicOnOffSprites;
         [SerializeField] private List<Sprite> sfxOnOffSprites;
 
-        private void Start()
+        private void Awake()
         {
-            SoundManager.Instance.musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", .5f);
-            SoundManager.Instance.sfxSource.volume = PlayerPrefs.GetFloat("SFXVolume", .5f);
-            
-            musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", .5f);
+            musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", .1f);
             sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", .5f);
         }
         

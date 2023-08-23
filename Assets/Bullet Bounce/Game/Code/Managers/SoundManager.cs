@@ -30,12 +30,25 @@ namespace S_Durlanik.Sound
         public List<AudioClip> _sfxSources;
         private void Start()
         {
+            musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", .1f);
+            sfxSource.volume = PlayerPrefs.GetFloat("SFXVolume", .5f);
+            
             foreach (string sfx in SFX.GetNames(typeof(SFX)))
             {
                 _sfxSources.Add(Resources.Load<AudioClip>("SFX/"+sfx));
             }
+            PlayMusic(Music.Main_Menu_Music_01);
+        }
+        
+        public void PlayMusic(Music music)
+        {
+            AudioClip clip = Resources.Load<AudioClip>("Music/"+music);
+            if(clip)
+                musicSource.clip = clip;
+            musicSource.Play();
         }
 
+        // SFX
         public void PlaySFXOneTime(SFX sfx)
         {
             AudioClip clip = _sfxSources.Find(x => x.name == sfx.ToString());
@@ -62,6 +75,10 @@ namespace S_Durlanik.Sound
         #endregion
     }
 
+    public enum Music
+    {
+        Main_Menu_Music_01,
+    }
     public enum SFX
     {
         Button_Sound_01,
