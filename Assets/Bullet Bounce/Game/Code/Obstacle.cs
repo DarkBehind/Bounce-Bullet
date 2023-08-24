@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using S_Durlanik.Sound;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -63,6 +64,7 @@ namespace S_Durlanik.Game
             }
             GameObject effect = Instantiate(tntExplosionEffect, transform.position + new Vector3(0,0,-20f), Quaternion.identity);
             effect.transform.localScale = new Vector3(tntRadius, tntRadius, 1f) * .5f;
+            SoundManager.Instance.PlaySFXOneTime(SFX.Explosion_Sound_1);
             OnTntExplode?.Invoke();
             DestroyObstacle();
         }

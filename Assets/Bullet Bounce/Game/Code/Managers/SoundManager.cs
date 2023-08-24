@@ -88,8 +88,9 @@ namespace S_Durlanik.Sound
         Hurt_Sound_03,
         Hurt_Sound_04,
         Hurt_Sound_05,
-        SFX_SpinWheel_Start_Sound_1,
+        SpinWheel_Start_Sound_1,
         SpinWheel_Fast_Loop_Sound_1,
-        SpinWheel_Slow_Loop_Sound_1
+        SpinWheel_Slow_Loop_Sound_1,
+        Explosion_Sound_1,
     }
 }

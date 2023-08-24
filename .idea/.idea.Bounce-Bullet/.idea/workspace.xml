@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level10.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level16.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level16.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level22.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level22.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level25.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level25.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Sounds/Resources/SFX/SFX_SpinWheel_Start_Sound_1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Sounds/Resources/SFX/SFX_SpinWheel_Start_Sound_1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Sounds/SFX/Game Music Stingers and UI SFX Pack 2/UI_SFX/Misc/PP_Explosion_1_4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Sounds/SFX/Game Music Stingers and UI SFX Pack 2/UI_SFX/Misc/PP_Explosion_1_4.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr spikes impact ab.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr spikes impact ab.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr stretch trait ab.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr stretch trait ab.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +121,7 @@
       <workItem from="1692657137669" duration="9940000" />
       <workItem from="1692721095613" duration="2402000" />
       <workItem from="1692745354667" duration="1186000" />
-      <workItem from="1692869121015" duration="770000" />
+      <workItem from="1692869121015" duration="1567000" />
     </task>
     <servers />
   </component>
