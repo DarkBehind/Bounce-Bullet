@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelNumber: 16
-  enemyCount: 10
+  enemyCount: 9
   maxShotCount: 12
 --- !u!1 &2020040327640068508
 GameObject:

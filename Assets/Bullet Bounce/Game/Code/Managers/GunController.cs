@@ -45,10 +45,13 @@ namespace S_Durlanik.Game
                     return;
                 }
                 _mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
-                Vector2 direction = (_mousePosition - (Vector2)firePoint.position).normalized;
-                transform.right = direction;
+                if (Vector2.Distance(_mousePosition, firePoint.position) > 1.5f)
+                {
+                    Vector2 direction = (_mousePosition - (Vector2)firePoint.position).normalized;
+                    transform.right = direction;
+                    ShowAimLine();
+                }
 
-                ShowAimLine();
             }
 
             if (Input.GetMouseButtonUp(0) && !UI_System.IsPointerOverUIObject())

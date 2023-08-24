@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/ADS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/ADS.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/InterstitialAds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/InterstitialAds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/Rewarded.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/Rewarded.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Settings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Sounds/Music.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Sounds/SFX/Game Music Stingers and UI SFX Pack 2/Music/Funky Chill 2 loop.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Sounds/SFX/Game Music Stingers and UI SFX Pack 2/Music/Funky Chill 2 loop.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level16.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level16.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level22.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level22.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level25.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level25.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level4.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +121,8 @@
       <workItem from="1692643310483" duration="154000" />
       <workItem from="1692657137669" duration="9940000" />
       <workItem from="1692721095613" duration="2402000" />
-      <workItem from="1692745354667" duration="1185000" />
+      <workItem from="1692745354667" duration="1186000" />
+      <workItem from="1692869121015" duration="770000" />
     </task>
     <servers />
   </component>

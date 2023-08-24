@@ -23260,7 +23260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e1376302e6dce74988aa0927680e294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: 0
+  test: 1
   rewarded: {fileID: 2004024612}
   interstitialAds: {fileID: 2004024613}
   isRemoveAds: 0
@@ -101905,7 +101905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ReStart
+  m_text: Restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50c12c23294124aa48490c44ac65a9e4, type: 2}
   m_sharedMaterial: {fileID: 7746803525459343344, guid: 50c12c23294124aa48490c44ac65a9e4, type: 2}

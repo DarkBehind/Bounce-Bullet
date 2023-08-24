@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelNumber: 4
-  enemyCount: 8
+  enemyCount: 9
   maxShotCount: 3
 --- !u!1 &2020040327640068508
 GameObject:
@@ -691,6 +691,10 @@ PrefabInstance:
     - target: {fileID: 1026395742616054058, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
+      propertyPath: m_Mass
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
@@ -1750,6 +1754,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
+      propertyPath: m_Mass
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
       value: Circle_Obstacle_1
@@ -2042,6 +2050,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
+      propertyPath: m_Mass
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
       value: Circle_Obstacle_3
@@ -2185,6 +2197,10 @@ PrefabInstance:
     - target: {fileID: 1026395742616054058, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
+      propertyPath: m_Mass
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
@@ -2544,6 +2560,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
+      propertyPath: m_Mass
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
       value: Circle_Obstacle
@@ -2621,6 +2641,10 @@ PrefabInstance:
     - target: {fileID: 1026395742616054058, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
+      propertyPath: m_Mass
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
