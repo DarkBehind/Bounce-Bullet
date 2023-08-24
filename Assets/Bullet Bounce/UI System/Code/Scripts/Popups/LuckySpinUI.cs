@@ -146,7 +146,7 @@ namespace S_Durlanik.UI
             // Sonucu yazdır
             resultText.text = "Selected Segment: " + (_selectedSegmentNumber);
             
-            SoundManager.Instance.PlaySFX(SFX.SFX_SpinWheel_Start_Sound_1);
+            SoundManager.Instance.PlaySFX(SFX.SpinWheel_Start_Sound_1);
             // Ödülü ver
             InventoryManager.Instance.PurchaseItem(rewardItems[_selectedSegmentNumber - 1],true);
             InventoryManager.Instance.ShowItemClaimPopup(rewardItems[_selectedSegmentNumber - 1].itemSprite, rewardItems[_selectedSegmentNumber - 1].stackAmount);

@@ -91,6 +91,6 @@ namespace S_Durlanik.Sound
         SpinWheel_Start_Sound_1,
         SpinWheel_Fast_Loop_Sound_1,
         SpinWheel_Slow_Loop_Sound_1,
-        Explosion_Sound_1,
+        Explosion_Sound_01,
     }
 }
