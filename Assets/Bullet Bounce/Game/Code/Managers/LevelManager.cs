@@ -15,6 +15,7 @@ namespace S_Durlanik.Game
 
         public PlayTopBar playTopBar;
         public UI_Screen playScreen;
+        public UI_Screen mainScreen;
         public UI_Screen pauseScreen;
 
         public Transform levelsParent;
@@ -129,7 +130,7 @@ namespace S_Durlanik.Game
             if(_currentLevelObject)
                 Destroy(_currentLevelObject.gameObject);
             Level levelToLoad = Instantiate(Resources.Load<Level>("Levels/Level" + levelNumber), levelsParent);
-            playScreen.HandleAnimator("show");
+            UI_System.Instance.SwitchScreens(playScreen);
             if (levelToLoad)
             {
                 OnLevelStarted?.Invoke();
@@ -155,7 +156,8 @@ namespace S_Durlanik.Game
         {
             UI_System.Instance.GoToMainScreen();
             gameOverUI.ResetFailedTime();
-            playScreen.HandleAnimator("hide");
+            UI_System.Instance.SwitchScreens(mainScreen);
+
 
         }
 

@@ -21059,6 +21059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playTopBar: {fileID: 797773346}
   playScreen: {fileID: 654508017}
+  mainScreen: {fileID: 714074211}
   pauseScreen: {fileID: 2530574701794018925}
   levelsParent: {fileID: 1494000232}
   maxShotCount: 0
@@ -117040,7 +117041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 154.5, y: 0}
   m_SizeDelta: {x: 0, y: 64}
   m_Pivot: {x: 0.5, y: 0.50000125}
 --- !u!114 &4542144261724530065
