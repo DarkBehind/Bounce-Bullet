@@ -3031,13 +3031,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2693617260159539286}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1621925479}
+        m_TargetAssemblyTypeName: S_Durlanik.UI.UI_System, Assembly-CSharp
+        m_MethodName: SwitchScreens
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 3176310078111916586}
+          m_ObjectArgumentAssemblyTypeName: S_Durlanik.UI.UI_Screen, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -23622,7 +23622,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a89245f0f2199741801342eb4071ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  removeAdsScreen: {fileID: 2693617260159539286}
+  removeAdsScreen: {fileID: 3176310078111916586}
+  removeAdsShowCount: 1
   adShowToLevelCount: 1
 --- !u!1 &2006184159
 GameObject:
@@ -103920,6 +103921,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3176310078111916584}
+  - component: {fileID: 3176310078111916587}
+  - component: {fileID: 3176310078111916586}
   - component: {fileID: 3176310078111916585}
   m_Layer: 5
   m_Name: Ad_Remove
@@ -105418,6 +105421,40 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &3176310078111916586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2693617260159539286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea790a076769dd4b8e8d5838e48a79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSelectable: {fileID: 0}
+  screenSwitching: 0
+--- !u!95 &3176310078111916587
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2693617260159539286}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 6883d3f9f0cc0504fb225e4357e18e1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &3191634867983397405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128967,10 +129004,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2693617260159539286}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 3176310078111916586}
+        m_TargetAssemblyTypeName: S_Durlanik.UI.AdRemoveUI, Assembly-CSharp
+        m_MethodName: LaterButton_OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

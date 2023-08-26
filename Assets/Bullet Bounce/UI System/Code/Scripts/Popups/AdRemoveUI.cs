@@ -17,7 +17,14 @@ namespace S_Durlanik.UI
         {
             base.CloseScreen(onClosed);
         }
-
+        public void ShowScreen()
+        {
+            StartScreen();
+        }
+        public void LaterButton_OnClick()
+        {
+            CloseScreen();
+        }
         public void OnRemoveAdsComplete()
         {
             Debug.Log("Ads Removed!");

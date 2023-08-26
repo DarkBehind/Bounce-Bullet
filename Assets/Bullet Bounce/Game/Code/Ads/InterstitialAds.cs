@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using GoogleMobileAds.Api;
+using S_Durlanik.UI;
 using UnityEngine;
 
 public class InterstitialAds : MonoBehaviour
@@ -18,7 +19,8 @@ public class InterstitialAds : MonoBehaviour
 #endif
 
     private InterstitialAd interstitialAd;
-    public GameObject removeAdsScreen;
+    public AdRemoveUI removeAdsScreen;
+    public int removeAdsShowCount = 1;
     public int adShowToLevelCount = 3;
     
     private string AdUnitID()
@@ -109,10 +111,12 @@ public class InterstitialAds : MonoBehaviour
     }
 
     private int count = 0;
+    private int removeAdsShowCountTemp = 0;
     public void ShowAd()
     {
         if (ADS.Instance.isRemoveAds) return;
         count++;
+        removeAdsShowCountTemp++;
         if (count >= adShowToLevelCount)
         {
             count = 0;
@@ -125,6 +129,12 @@ public class InterstitialAds : MonoBehaviour
         {
             Debug.Log("Showing interstitial ad.");
             interstitialAd.Show();
+            
+            if (removeAdsShowCountTemp >= removeAdsShowCount)
+            {
+                removeAdsShowCountTemp = 0;
+                removeAdsScreen.StartScreen();
+            }
         }
         else
         {

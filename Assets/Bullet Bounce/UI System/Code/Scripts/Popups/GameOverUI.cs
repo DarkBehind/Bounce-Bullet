@@ -56,7 +56,6 @@ namespace S_Durlanik.UI
             {
                 AddBulletAndContinueGame();
                 Debug.Log("Bullet has been bought");
-                _failedTime++;
             }, () =>
             {
                 _clicked = false;
@@ -79,6 +78,7 @@ namespace S_Durlanik.UI
             LevelManager.Instance.AddShotCount(bulletAmount);
             LevelManager.Instance.ChangeGameStatus(isGameRunning: true);
             LevelManager.Instance.playTopBar.UpdateBulletCountText();
+            _failedTime++;
             CloseScreen(() =>
             {
                 _clicked = false;
@@ -102,7 +102,7 @@ namespace S_Durlanik.UI
         {
             if (_clicked) return;
             _clicked = true;
-            ADS.Instance.interstitialAds.ShowAd();
+            //ADS.Instance.interstitialAds.ShowAd();
             LevelManager.Instance.RestartLevel();
             CloseScreen(() =>
             {
