@@ -18,6 +18,7 @@ public class InterstitialAds : MonoBehaviour
 #endif
 
     private InterstitialAd interstitialAd;
+    public GameObject removeAdsScreen;
     public int adShowToLevelCount = 3;
     
     private string AdUnitID()
