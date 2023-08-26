@@ -11,6 +11,7 @@ public class DailyFreeCoinUI : PopupScreen
 {
     [SerializeField]private GameObject notificationGameObject;
     [SerializeField]private Button claimButton;
+    [SerializeField]private Button claim2XButton;
     [SerializeField] private RewardItem _currentReward;
     [SerializeField] private TextMeshProUGUI rewardText;
     [SerializeField] private int[] _maxAndMinRewardAmount;
@@ -28,6 +29,7 @@ public class DailyFreeCoinUI : PopupScreen
     {
         notificationGameObject.SetActive(status);
         claimButton.interactable = status;
+        claim2XButton.interactable = status;
         if (!status)
         {
             rewardText.text = "Claimed";
@@ -66,5 +68,17 @@ public class DailyFreeCoinUI : PopupScreen
         InventoryManager.Instance.ShowItemClaimPopup(_currentReward.itemSprite, _currentReward.stackAmount);
         InventoryManager.Instance.AddGold(_currentReward.stackAmount);
         Extensions.SetFreeCoinLastClaimedDay();
+    }
+
+    public void ClaimDailFreeCoin2X()
+    {
+        ADS.Instance.rewarded.LoadRewardedAd(null, () =>
+        {
+            ChangeNotificationStatus(false);
+            UI_System.Instance.SwitchScreens(UI_System.Instance.startScreen);
+            InventoryManager.Instance.ShowItemClaimPopup(_currentReward.itemSprite, _currentReward.stackAmount);
+            InventoryManager.Instance.AddGold(_currentReward.stackAmount * 2);
+            Extensions.SetFreeCoinLastClaimedDay();
+        });
     }
 }
