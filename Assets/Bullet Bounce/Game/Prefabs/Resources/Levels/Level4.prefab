@@ -692,10 +692,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
-      propertyPath: m_Mass
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
       value: Circle_Obstacle_2
@@ -868,7 +864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9109068713589811829, guid: f519112fe83303343b85889c5f929310, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15
+      value: 12.06
       objectReference: {fileID: 0}
     - target: {fileID: 9109068713589811829, guid: f519112fe83303343b85889c5f929310, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1642,7 +1638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9109068713589811829, guid: f519112fe83303343b85889c5f929310, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13
+      value: 10.06
       objectReference: {fileID: 0}
     - target: {fileID: 9109068713589811829, guid: f519112fe83303343b85889c5f929310, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1753,10 +1749,6 @@ PrefabInstance:
     - target: {fileID: 1026395742616054058, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
-      propertyPath: m_Mass
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
@@ -1938,7 +1930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9109068713589811829, guid: f519112fe83303343b85889c5f929310, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19
+      value: 16.060001
       objectReference: {fileID: 0}
     - target: {fileID: 9109068713589811829, guid: f519112fe83303343b85889c5f929310, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2049,10 +2041,6 @@ PrefabInstance:
     - target: {fileID: 1026395742616054058, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
-      propertyPath: m_Mass
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
@@ -2198,10 +2186,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
-      propertyPath: m_Mass
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
       value: Circle_Obstacle_4
@@ -2300,7 +2284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9109068713589811829, guid: f519112fe83303343b85889c5f929310, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17
+      value: 14.06
       objectReference: {fileID: 0}
     - target: {fileID: 9109068713589811829, guid: f519112fe83303343b85889c5f929310, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2374,7 +2358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1176114963931061281, guid: 475e721e9ec7d544db6ac2b2269685c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.5
+      value: 8.56
       objectReference: {fileID: 0}
     - target: {fileID: 1176114963931061281, guid: 475e721e9ec7d544db6ac2b2269685c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2448,7 +2432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1176114963931061281, guid: 475e721e9ec7d544db6ac2b2269685c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16
+      value: 13.06
       objectReference: {fileID: 0}
     - target: {fileID: 1176114963931061281, guid: 475e721e9ec7d544db6ac2b2269685c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2560,10 +2544,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
-      propertyPath: m_Mass
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
       value: Circle_Obstacle
@@ -2641,10 +2621,6 @@ PrefabInstance:
     - target: {fileID: 1026395742616054058, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980397258977114377, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
-      propertyPath: m_Mass
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8622342762027909864, guid: 6dbbe8873e8586c4da5840202b756162, type: 3}
       propertyPath: m_Name
