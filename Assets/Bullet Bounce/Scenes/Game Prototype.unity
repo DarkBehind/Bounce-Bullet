@@ -56167,8 +56167,9 @@ MonoBehaviour:
   screenSwitching: 0
   gameOverPart1: {fileID: 226728962}
   gameOverPart2: {fileID: 472068857}
-  bulletPrice: 100
+  bulletPrices: 640000005e010000
   bulletAmount: 1
+  buyBulletButton: {fileID: 946523178437845421}
   bulletPriceText: {fileID: 946523176877243696}
 --- !u!225 &946523177692670194
 CanvasGroup:
@@ -101559,9 +101560,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1510975400}
-        m_TargetAssemblyTypeName: S_Durlanik.Game.LevelManager, Assembly-CSharp
-        m_MethodName: ReturnToMenu
+      - m_Target: {fileID: 2530574701794018925}
+        m_TargetAssemblyTypeName: S_Durlanik.UI.PauseUI, Assembly-CSharp
+        m_MethodName: OnMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

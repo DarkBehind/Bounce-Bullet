@@ -5,6 +5,7 @@ using S_Durlanik.Game;
 using S_Durlanik.UI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace S_Durlanik.UI
 {
@@ -12,14 +13,16 @@ namespace S_Durlanik.UI
     {
         [SerializeField] private GameObject gameOverPart1;
         [SerializeField] private GameObject gameOverPart2;
-        [SerializeField] private int bulletPrice = 100;
+        [SerializeField] private int[] bulletPrices = {100, 350};
+
         [SerializeField] private int bulletAmount = 1;
+        [SerializeField] private Button buyBulletButton;
         [SerializeField] private TextMeshProUGUI bulletPriceText;
+        int _failedTime = 0;
         bool _clicked = false;
         private void OnEnable()
         {
             LevelManager.OnLevelFailed += OnLevelFailed;
-            bulletPriceText.text = bulletPrice + " (+"+bulletAmount+" Bullet)";
         }
 
         private void OnDisable()
@@ -29,6 +32,19 @@ namespace S_Durlanik.UI
 
         private void OnLevelFailed()
         {
+            if (_failedTime >= bulletPrices.Length)
+            {
+                gameOverPart1.SetActive(false);
+                gameOverPart2.SetActive(true);
+            }
+            if(_failedTime < bulletPrices.Length)
+                bulletPriceText.text = bulletPrices[_failedTime] + " (+"+bulletAmount+" Bullet)";
+            
+            if(_failedTime < bulletPrices.Length && InventoryManager.Instance.UserGold.stackAmount <= bulletPrices[_failedTime])
+                buyBulletButton.interactable = false;
+            else
+                buyBulletButton.interactable = true;
+            
             StartScreen();
         }
 
@@ -36,10 +52,11 @@ namespace S_Durlanik.UI
         {
             if(_clicked) return;
             _clicked = true;
-            InventoryManager.Instance.CheckGoldAndRemove(bulletPrice, () =>
+            InventoryManager.Instance.CheckGoldAndRemove(bulletPrices[_failedTime], () =>
             {
                 AddBulletAndContinueGame();
                 Debug.Log("Bullet has been bought");
+                _failedTime++;
             }, () =>
             {
                 _clicked = false;
@@ -75,6 +92,11 @@ namespace S_Durlanik.UI
             gameOverPart1.SetActive(false);
             gameOverPart2.SetActive(true);
         }
+        
+        public void ResetFailedTime()
+        {
+            _failedTime = 0;
+        }
 
         public void OnTryAgain()
         {
@@ -87,6 +109,7 @@ namespace S_Durlanik.UI
                 _clicked = false;
                 gameOverPart1.SetActive(true);
                 gameOverPart2.SetActive(false);
+                ResetFailedTime();
             });
         }
 
@@ -100,6 +123,7 @@ namespace S_Durlanik.UI
                 _clicked = false;
                 gameOverPart1.SetActive(true);
                 gameOverPart2.SetActive(false);
+                ResetFailedTime();
             });
         }
     }

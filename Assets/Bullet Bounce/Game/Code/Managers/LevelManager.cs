@@ -154,6 +154,7 @@ namespace S_Durlanik.Game
         public void ReturnToMenu()
         {
             UI_System.Instance.GoToMainScreen();
+            gameOverUI.ResetFailedTime();
             playScreen.HandleAnimator("hide");
 
         }
@@ -168,6 +169,7 @@ namespace S_Durlanik.Game
             if (_currentLevelObject && _currentLevelObject.levelNumber < 25)
             {
                 LoadLevel(_currentLevelObject.levelNumber + 1);
+                gameOverUI.ResetFailedTime();
             }
             else
             {
