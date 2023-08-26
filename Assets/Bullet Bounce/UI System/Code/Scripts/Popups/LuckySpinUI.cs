@@ -18,6 +18,14 @@ namespace S_Durlanik.UI
             base.StartScreen(onStarted);
             
             spinSlotItems.ForEach(x => x.SetSpinSlotUI(rewardItems[x.slotID]));
+            if (InventoryManager.Instance.UserGold.stackAmount >= spinGoldAmount)
+            {
+                spinButton.interactable = true;
+            }
+            else
+            {
+                spinButton.interactable = false;
+            }
         }
         
         public override void CloseScreen(Action onClosed = null)
