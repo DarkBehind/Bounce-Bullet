@@ -157,8 +157,22 @@ namespace S_Durlanik.Game
             public const string LastClaimedDayByDate = "LastClaimedDayByDate";
             public const string CurrentRewardTaken = "CurrentRewardTaken";
             
+            // First Tutorial
+            public const string FirstTutorial = "FirstTutorial";
+
             // Free Coin
             public const string FreeCoinLastClaimedDay = "FreeCoinLastClaimedDay";
+        }
+        
+        public static bool IsFirstTutorial()
+        {
+            return !PlayerPrefs.HasKey(Prefs.FirstTutorial);
+        }
+        
+        public static void SetFirstTutorial()
+        {
+            PlayerPrefs.SetInt(Prefs.FirstTutorial, 1);
+            PlayerPrefs.Save();
         }
         
         public static void ClearChildren(Transform transform)

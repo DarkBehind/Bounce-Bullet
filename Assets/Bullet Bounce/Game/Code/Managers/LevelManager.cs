@@ -163,6 +163,7 @@ namespace S_Durlanik.Game
 
         public void PauseMenu()
         {
+            if(Extensions.IsFirstTutorial()) return;
             if (FindObjectOfType<Bullet>() == null)
                 UI_System.Instance.SwitchScreens(pauseScreen);
         }

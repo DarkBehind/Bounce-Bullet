@@ -36,7 +36,7 @@ namespace S_Durlanik.Game
         void Update()
         {
             // if touch on ui element then return
-           
+           if(Extensions.IsFirstTutorial()) return;
 
             if (Input.GetMouseButton(0) && !UI_System.IsPointerOverUIObject())
             {
