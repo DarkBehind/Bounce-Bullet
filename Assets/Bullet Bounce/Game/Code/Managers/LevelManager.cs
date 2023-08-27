@@ -67,8 +67,7 @@ namespace S_Durlanik.Game
         {
             Instance = this;
         }
-
-        int _obstacleWaitTime = 0;
+        
         private void CheckLevelFailed()
         {
             if (!_isGameRunning)
@@ -83,29 +82,18 @@ namespace S_Durlanik.Game
                     return;
                 }
                 
-                if (_obstacleWaitTime < 5)
-                {
-                    Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
-                    foreach (Obstacle obstacle in obstacles)
+                
+                Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
+                foreach (Obstacle obstacle in obstacles)
+                { 
+                    if (obstacle.GetComponent<Rigidbody2D>().velocity.magnitude > .1f)
                     {
-                        if (obstacle.GetComponent<Rigidbody2D>().velocity.magnitude > .1f)
-                        {
-                            _obstacleWaitTime++;
-                            return;
-                        }
-                    }
-                }else
-                {
-                    _obstacleWaitTime = 0;
-                    Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
-                    foreach (Obstacle obstacle in obstacles)
-                    {
-                        obstacle.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                        return;
                     }
                 }
-                
-                
-                
+
+
+
                 OnLevelFailed?.Invoke();
                 Debug.Log("Level Failed!");
                 _isGameRunning = false;
