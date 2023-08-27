@@ -130,7 +130,6 @@ namespace S_Durlanik.Game
             if(_currentLevelObject)
                 Destroy(_currentLevelObject.gameObject);
             Level levelToLoad = Instantiate(Resources.Load<Level>("Levels/Level" + levelNumber), levelsParent);
-            UI_System.Instance.SwitchScreens(playScreen);
             if (levelToLoad)
             {
                 OnLevelStarted?.Invoke();
@@ -148,7 +147,6 @@ namespace S_Durlanik.Game
 
         public void RestartLevel()
         {
-            UI_System.Instance.GoToPlayScreen();
             LoadLevel(GetCurrentLevel());
         }
 

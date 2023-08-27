@@ -3,18 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1827347f-8fb0-4bb4-a8d8-ffd4d1bc5911" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bounce-Bullet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/GunController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/InterstitialAds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Ads/InterstitialAds.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Code/Managers/SceneManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Game/Prefabs/Resources/Levels/Level1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/Scenes/Game Prototype.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/Preview/_Common_FunctionIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/Preview/_Common_FunctionIcon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/Preview/_Common_Icons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/Preview/_Common_Icons.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/Preview/_Common_RuneIcons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/Preview/_Common_RuneIcons.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/Preview/_Component_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/Preview/_Component_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/Preview/_Component_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/Preview/_Component_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_Icon/Icon_ImageIcon_Tutorial_LineCircle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_Icon/Icon_ImageIcon_Tutorial_LineCircle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/LevelListUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bullet Bounce/UI System/Code/Scripts/Popups/LevelListUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +122,7 @@
       <workItem from="1692745354667" duration="1186000" />
       <workItem from="1692869121015" duration="2308000" />
       <workItem from="1693039538458" duration="16701000" />
+      <workItem from="1693124128279" duration="2169000" />
     </task>
     <servers />
   </component>

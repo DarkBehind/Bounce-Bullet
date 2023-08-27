@@ -133,7 +133,7 @@ public class InterstitialAds : MonoBehaviour
             if (removeAdsShowCountTemp >= removeAdsShowCount)
             {
                 removeAdsShowCountTemp = 0;
-                removeAdsScreen.StartScreen();
+                removeAdsScreen.ShowScreen();
             }
         }
         else

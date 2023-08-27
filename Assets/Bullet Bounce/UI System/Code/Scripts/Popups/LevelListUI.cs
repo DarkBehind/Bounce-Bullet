@@ -43,7 +43,7 @@ public class LevelListUI : PopupScreen
         }
         
         Debug.Log("Level Loaded: " + itemUI.levelNumber);
-        UI_System.Instance.GoToPlayScreen();
+        UI_System.Instance.SwitchScreens(UI_System.Instance.playScreen);
         LevelManager.Instance.LoadLevel(itemUI.levelNumber);
 
     }
