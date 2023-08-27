@@ -5100,7 +5100,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 22100000, guid: b8e8a1453ba11d1449a5b4c7e10d4080, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -103638,13 +103638,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1621925479}
-        m_TargetAssemblyTypeName: S_Durlanik.UI.UI_System, Assembly-CSharp
-        m_MethodName: SwitchScreens
-        m_Mode: 2
+      - m_Target: {fileID: 2530574701794018925}
+        m_TargetAssemblyTypeName: S_Durlanik.UI.PauseUI, Assembly-CSharp
+        m_MethodName: OnContinue
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 654508017}
-          m_ObjectArgumentAssemblyTypeName: S_Durlanik.UI.UI_Screen, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -103867,7 +103867,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 22100000, guid: f4a2b6965b96f4e4a949a68488874544, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0

@@ -14,7 +14,12 @@ namespace S_Durlanik.UI
         {
             settingsUI.SetActive(true);
         }
-
+        public void OnContinue()
+        {
+            Time.timeScale = 1;
+            screenSwitching = false;
+            UI_System.Instance.SwitchScreens(UI_System.Instance.playScreen);
+        }
         public void OnRestart()
         {
             LevelManager.Instance.RestartLevel();
@@ -22,6 +27,7 @@ namespace S_Durlanik.UI
 
         public void OnMenu()
         {
+            Time.timeScale = 1;
             LevelManager.Instance.ReturnToMenu();
         }
 

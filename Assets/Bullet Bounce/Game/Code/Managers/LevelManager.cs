@@ -68,7 +68,7 @@ namespace S_Durlanik.Game
             Instance = this;
         }
 
-
+        int _obstacleWaitTime = 0;
         private void CheckLevelFailed()
         {
             if (!_isGameRunning)
@@ -82,15 +82,28 @@ namespace S_Durlanik.Game
                 {
                     return;
                 }
-
-                Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
-                foreach (Obstacle obstacle in obstacles)
+                
+                if (_obstacleWaitTime < 5)
                 {
-                    if (obstacle.GetComponent<Rigidbody2D>().velocity.magnitude > .1f)
+                    Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
+                    foreach (Obstacle obstacle in obstacles)
                     {
-                        return;
+                        if (obstacle.GetComponent<Rigidbody2D>().velocity.magnitude > .1f)
+                        {
+                            _obstacleWaitTime++;
+                            return;
+                        }
+                    }
+                }else
+                {
+                    _obstacleWaitTime = 0;
+                    Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
+                    foreach (Obstacle obstacle in obstacles)
+                    {
+                        obstacle.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     }
                 }
+                
                 
                 
                 OnLevelFailed?.Invoke();
@@ -155,7 +168,8 @@ namespace S_Durlanik.Game
             UI_System.Instance.GoToMainScreen();
             gameOverUI.ResetFailedTime();
             UI_System.Instance.SwitchScreens(mainScreen);
-
+            if(_currentLevelObject)
+                Destroy(_currentLevelObject.gameObject);
 
         }
 
@@ -163,7 +177,9 @@ namespace S_Durlanik.Game
         {
             if(Extensions.IsFirstTutorial()) return;
             if (FindObjectOfType<Bullet>() == null)
+            {
                 UI_System.Instance.SwitchScreens(pauseScreen);
+            }
         }
         public void LoadNextLevel()
         {

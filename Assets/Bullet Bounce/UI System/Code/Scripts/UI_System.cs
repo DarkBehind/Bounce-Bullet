@@ -111,6 +111,14 @@ namespace S_Durlanik.UI
                 yield return new WaitForSeconds(.05f);
             }
             _screenSwitching = false;
+            if (aScreen.name == "Pause")
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
         }
 
         public void FadeIn()
